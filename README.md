@@ -1,32 +1,26 @@
-# CMIP — Cannabis Molecular Intelligence Platform (schema + architecture)
+# CMIP — Cannabis Molecular Intelligence Platform
 
-**Status:** early architecture sketch. Schema and design documentation
-only — **no code and no data ship in this repo.**
+**Status:** schema and architecture notes. **No code and no lab data** live
+in this repo yet.
 
-## What this is
+## Why this exists
 
-A normalized, provenance-aware schema design for cannabis/hemp chemistry
-and cultivar data — compounds, terpenes, cultivars, lab results, and the
-relationships between them — intended to replace flat "terpene database"
-spreadsheets with a proper relational/graph model that can power
-visualization, cheminformatics, and analytics from one underlying source
-of truth.
+Most “terpene databases” are giant spreadsheets: the same molecule appears
+under five spellings, boiling points show up as bare numbers with no source,
+and aroma wheels get mixed into chemistry columns. CMIP is a design for doing
+that job properly — one place for compounds, cultivars, lab COAs, and the
+links between them — so charts and tools can share a single backbone.
 
-## Design principles
+## Design principles (in plain language)
 
-- **Never duplicate chemistry.** A compound exists exactly once (a
-  `Compound` table keyed by `compound_uuid`); everything else (cultivar
-  measurements, lab results, retail products) references it rather than
-  re-storing values.
-- **Every value carries provenance.** Never store a bare number like
-  `177` for a boiling point — store
-  `{value, units, method, reference, confidence, version}`.
-- **Isomers are never merged.** α-pinene and β-pinene, cis- and
-  trans-ocimene, stay distinct compounds — the biosynthetic/pathway graph
-  needs that granularity to mean anything.
-- **Visualization stays separate from chemistry.** Aroma/flavor/effect
-  wheels are their own weighted taxonomies, not mixed into the compound
-  record itself.
+- **One row per real chemical.** Everything else points at it; do not paste
+  the same molecule into ten tables.
+- **Numbers need a story.** A boiling point is not just `177` — units, method,
+  citation, and confidence travel with the value.
+- **Isomers stay distinct.** α-pinene is not β-pinene; cis/trans matter for
+  pathways and effects.
+- **Pretty wheels are not chemistry.** Aroma/flavor/effect taxonomies sit
+  beside the science, not inside the compound record.
 
 ## Layered architecture
 
