@@ -110,6 +110,21 @@ need to source your own licensed chemistry/strain data; be mindful of
 scraping and redistribution terms for any commercial or scraped source
 before republishing it anywhere.
 
+
+## How this came to be
+
+Alongside caregiving systems, a second thread kept showing up in cloud LLM
+brainstorms: terpene / cultivar data trapped in messy spreadsheets. CMIP is
+the schema answer — one place for chemistry and provenance, not five spellings
+of the same molecule.
+
+The work lived as staging notes and chat-shaped designs, then as a **docs-only**
+public repo after the ACL deadline week. No proprietary lab dumps in-tree;
+just the shape of the database we wish existed.
+
+**Timeline anchors:** exploratory vibecoding from **22 March 2026**; caregiving
+focus from **13 April 2026**; public architecture sketch late **July 2026**.
+
 ## License
 
 MIT — see `LICENSE`.
@@ -119,3 +134,12 @@ MIT — see `LICENSE`.
 This is an independent architecture sketch, not affiliated with,
 endorsed by, or sponsored by any lab, vendor, or database referenced
 generically above.
+
+---
+
+<p align="left">
+  <a href="https://linktr.ee/the1truedan"><img src="https://img.shields.io/badge/Linktree-39E09B?style=for-the-badge&logo=linktree&logoColor=white" alt="Linktree"></a>
+  <a href="https://ko-fi.com/the1truedan"><img src="https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Ko-fi"></a>
+</p>
+
+**© 2026 M.A.N.A.G.E.R. LLC** — *prepare for the care when we cannot be there*
