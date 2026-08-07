@@ -3,10 +3,10 @@
 **Status:** schema and architecture notes. **No code and no lab data** live in this repo yet.
 
 <p align="center">
-  <img src="docs/assets/cmip-ceo-terpene-cluster-lab.jpg" alt="Concept art: CMIP founder studying a luminous terpene cluster with oversized telescope and microscope in a lab, surrounded by collaborators in beanbag chairs" width="920" />
+  <img src="docs/assets/cmip-origin-storyboard-sheet.jpg" alt="Eight-panel comic storyboard: how CMIP came to be — vibecode, look up terpenes, collect data, stoners gather, verify, toss unverified data, stoners stay, coder still codes" width="920" />
 </p>
 
-<p align="center"><em>Concept art — founder vision for CMIP (lab coat, terpene cluster, multi-scale observation). Generated for this repo; not a product claim or medical illustration.</em></p>
+<p align="center"><em>Origin storyboard — founder FaceID panels via <a href="https://github.com/the1truedan/mok-tua">mok-tua</a> (local Comfy, not Imagine). Identity from the public <a href="https://github.com/the1truedan/mok-tua/blob/main/docs/assets/pres-smoke/00-ceo-source-still.jpg">ceo forehead source still</a>. Full strip: <a href="docs/assets/origin-storyboard/">docs/assets/origin-storyboard/</a>.</em></p>
 
 ## Why this exists
 
