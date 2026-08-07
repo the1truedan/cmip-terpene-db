@@ -1,178 +1,111 @@
 # Open data source pathways (planned outline)
 
-**Status:** planning document only — no data pulled, no pipeline built. This
-maps the schema modules in the main [README](../README.md) to legitimate
-open/public-domain data sources, so the eventual ETL has a sourcing plan
-before anyone writes a loader.
+**Status:** planning document only — no data pulled, no pipeline built. Maps schema modules in the [README](../README.md) to legitimate open/public-domain sources so eventual ETL has a sourcing plan before loaders exist.
 
-## How this pivot came to be
+Design chat attribution (Grok, ChatGPT, Claude, local models, …) lives in [CONVERSATION_PROVIDERS.md](CONVERSATION_PROVIDERS.md). **This file is only for chemistry/data sources.**
 
-The earliest work on this project wasn't a sourcing plan — it was a pile of
-data. A run of chat-driven sessions pulled together a large, real dataset:
-a many-thousand-row strain/cultivar CSV, a multi-thousand-entry compound
-structure export, spectral files, and a couple of Excel schema templates
-that had already been partly seeded with real compound rows. It looked like
-a running start — the raw material for exactly the kind of chemistry
-database this repo's README describes.
+## Why open sources first
 
-Then came the second look. None of that data had a clear paper trail: it had
-been gathered opportunistically, not sourced from a named database with
-known terms, and there was no way to say with confidence what could be
-redistributed, republished, or shipped in a public-facing schema project
-versus what was scraped from somewhere that never agreed to that. Real,
-substantial, useful — and unvetted. Shipping it, or even designing around it
-as if it were a settled foundation, would have meant building on ground
-nobody had checked.
+An earlier private staging pile (strain CSV, structure export, spectra, partially seeded Excel templates) looked useful but had **no clear redistribution paper trail**. Shipping or designing as if that pile were settled foundation was rejected.
 
-So the project redirected. Instead of treating that pile as the seed corpus,
-this repo stays **schema and architecture only**, and this document exists
-to plan a *different* path to the same data: named, licensed, or
-public-domain sources — PubChem, ChEBI, KEGG, ChEMBL, NIST, USDA-ARS — each
-with its access terms stated up front, so nothing goes into `/core` without
-knowing exactly where it came from and what's allowed to be done with it.
-The original pile isn't part of this plan; it's parked separately pending
-its own licensing review, and won't be pulled into this repo's story until
-that's resolved on its own terms.
+This repo stays **schema and architecture only**. Open, named sources — each with access terms — are the planned path into `/core`. Unvetted private piles stay out until independently license-reviewed.
 
-## Scope and a deliberate exclusion
+## Scope
 
-This outline covers **open, license-checked sources only**. It deliberately
-excludes the already-collected scraped strain/spectra dataset referenced in
-private staging notes elsewhere — that data's scraping and redistribution
-terms are unconfirmed, so it stays out of this repo (and out of this plan)
-until reviewed separately on its own terms. Everything below is either
-public-domain (US government / USDA-ARS work), or a named database with its
-license/access terms called out explicitly so nothing gets mirrored on an
-assumption.
+Covers **open, license-checked sources only**. Excludes unconfirmed scraped strain/spectra corpora. Everything below is public-domain (e.g. US government / USDA-ARS) or a named database with explicit access notes.
 
-## Sourcing rule, extended from "numbers need a story"
+## Sourcing rule
 
-The README's design principle — a value carries units/method/citation/
-confidence — applies to *where the value came from* too. Every source entry
-below should eventually carry: license type, access method (API / bulk
-download / manual), rate limits, which CMIP field(s) it fills, and a
-redistribution note. Nothing gets bulk-mirrored without checking that note
-first.
+The README principle — values carry units/method/citation/confidence — applies to **provenance** too. Each planned source should eventually record: license type, access method (API / bulk / manual), rate limits, CMIP fields filled, and redistribution notes. No bulk mirror without that note.
 
 ## Module-by-module source map
 
 ### Compound identity & structure — `Compounds`, `Synonyms`
-- **PubChem** (NIH/NLM) — CID, IUPAC name, synonyms, InChI/InChIKey, SMILES,
-  formula, molecular weight, exact mass, computed LogP/TPSA. Public domain;
-  PUG REST API + bulk FTP.
-- **ChemSpider** (RSC) — supplementary cross-ID resolution. Free tier; ToS
-  restricts bulk redistribution — use for lookups, not mirroring.
-- **ChEBI** (EBI) — curated small-molecule ontology; also feeds Classification
-  below.
+
+| Source | Role | Links |
+|--------|------|--------|
+| **PubChem** (NIH/NLM) | CID, IUPAC, synonyms, InChI/InChIKey, SMILES, formula, mass, computed LogP/TPSA. Public domain; PUG REST + bulk FTP | [Home](https://pubchem.ncbi.nlm.nih.gov/) · [Programmatic access](https://pubchem.ncbi.nlm.nih.gov/docs/programmatic-access) · [PUG REST](https://pubchem.ncbi.nlm.nih.gov/docs/pug-rest) · [PUG REST tutorial](https://pubchem.ncbi.nlm.nih.gov/docs/pug-rest-tutorial) · [About / data use](https://pubchem.ncbi.nlm.nih.gov/docs/about) |
+| **ChemSpider** (RSC) | Cross-ID resolution; free tier; ToS limits bulk redistribution — lookups, not full mirrors | [https://www.chemspider.com/](https://www.chemspider.com/) |
+| **ChEBI** (EMBL-EBI) | Curated small-molecule dictionary + ontology; also feeds Classification | [https://www.ebi.ac.uk/chebi/](https://www.ebi.ac.uk/chebi/) · [ChEBI 2.0 / open license notes](https://www.embl.org/news/updates-from-data-resources/chebi-2-0-launches/) · data commonly **CC BY 4.0** |
 
 ### Classification — ontology tree
-- **ChEBI** — parent/child terms (Organic Compound → Terpenoid →
-  Monoterpenoid → Alcohol → [compound]) instead of the flat categories the
-  design explicitly rejects.
-- **KEGG BRITE** hierarchies — terpenoid backbone biosynthesis classes.
-  Free for academic/non-commercial use; commercial redistribution needs a
-  license — flag before any public mirror.
+
+| Source | Role | Links |
+|--------|------|--------|
+| **ChEBI ontology** | Parent/child terms (Organic Compound → Terpenoid → Monoterpenoid → …) | [https://www.ebi.ac.uk/chebi/](https://www.ebi.ac.uk/chebi/) |
+| **KEGG BRITE** | Terpenoid backbone biosynthesis classes; academic/non-commercial free; commercial needs license | [https://www.genome.jp/kegg/brite.html](https://www.genome.jp/kegg/brite.html) · [KEGG license](https://www.kegg.jp/kegg/legal.html) |
 
 ### Functional chemistry / properties
-- **NIST WebBook** — boiling point, melting point, density, vapor pressure,
-  each with method + literature citation attached already. Free to browse;
-  bulk scraping is restricted, so pull per-record with citation intact.
-- **PubChem computed properties** — LogP/TPSA/solubility estimates, as a
-  cross-check against NIST empirical values (computed vs. measured should
-  stay distinguishable fields, not merged).
+
+| Source | Role | Links |
+|--------|------|--------|
+| **NIST Chemistry WebBook** | Boiling/melting points, density, vapor pressure with literature citations; bulk scraping restricted — per-record pull | [https://webbook.nist.gov/chemistry/](https://webbook.nist.gov/chemistry/) |
+| **PubChem computed properties** | LogP/TPSA/solubility estimates; keep **computed vs measured** as distinct fields | [PUG REST](https://pubchem.ncbi.nlm.nih.gov/docs/pug-rest) |
 
 ### Pathways — biosynthetic graph
-- **KEGG Pathway** (`map00900` terpenoid backbone biosynthesis, `map00902`
-  monoterpenoid biosynthesis, etc.) — precursor/enzyme/pathway edges.
-- **MetaCyc / PlantCyc** — plant-specific pathway detail, EC numbers.
-- **Reactome** — secondary, cross-species pathway context.
+
+| Source | Role | Links |
+|--------|------|--------|
+| **KEGG Pathway** | e.g. `map00900` terpenoid backbone, `map00902` monoterpenoid biosynthesis | [https://www.genome.jp/kegg/pathway.html](https://www.genome.jp/kegg/pathway.html) · [map00900](https://www.genome.jp/pathway/map00900) |
+| **MetaCyc / PlantCyc** | Plant pathway detail, EC numbers | [https://metacyc.org/](https://metacyc.org/) · [https://plantcyc.org/](https://plantcyc.org/) |
+| **Reactome** | Cross-species pathway context | [https://reactome.org/](https://reactome.org/) |
 
 ### Biological activity & protein targets
-- **ChEMBL** — bioassay results (IC50/EC50/Ki) already shaped as
-  compound/target/assay/confidence, matching the module's design directly.
-- **Open Targets** — compound–target–disease association graph with
-  genetic/clinical evidence scoring.
-- **UniProt** — canonical target records (CB1/CNR1, CB2/CNR2, TRPV1, 5-HT1A,
-  etc.) for the Protein Targets module.
-- **PubMed / PMC** — primary-literature citations, so each biological-activity
-  row's `evidence_level` and `confidence` are earned, not asserted.
 
-*(Note: this session has live query access to ChEMBL, Open Targets, PubMed,
-ClinicalTrials.gov, and bioRxiv/medRxiv via connected tools — small
-prototype pulls for a handful of terpenes are feasible on request before any
-real ETL is built.)*
+| Source | Role | Links |
+|--------|------|--------|
+| **ChEMBL** | Bioassays (IC50/EC50/Ki) as compound/target/assay/confidence | [https://www.ebi.ac.uk/chembl/](https://www.ebi.ac.uk/chembl/) · [Web services](https://chembl.gitbook.io/chembl-interface-documentation/web-services) |
+| **Open Targets** | Compound–target–disease associations with evidence scoring | [https://www.opentargets.org/](https://www.opentargets.org/) · [Platform](https://platform.opentargets.org/) |
+| **UniProt** | Canonical targets (e.g. CNR1/CNR2, TRPV1, 5-HT1A) | [https://www.uniprot.org/](https://www.uniprot.org/) |
+| **PubMed / PMC** | Primary literature for `evidence_level` / `confidence` | [https://pubmed.ncbi.nlm.nih.gov/](https://pubmed.ncbi.nlm.nih.gov/) · [https://pmc.ncbi.nlm.nih.gov/](https://pmc.ncbi.nlm.nih.gov/) |
 
-### Clinical relevance (optional layer, evidence-only, not medical advice)
-- **ClinicalTrials.gov** — registered trials on cannabinoids/terpenes for
-  PTSD, chronic pain, cancer-symptom management; structured eligibility and
-  endpoint data.
-- **bioRxiv / medRxiv** — early entourage-effect research, explicitly flagged
-  as non-peer-reviewed if pulled in.
+### Clinical relevance (optional, evidence-only — not medical advice)
+
+| Source | Role | Links |
+|--------|------|--------|
+| **ClinicalTrials.gov** | Registered trials; structured eligibility/endpoints | [https://clinicaltrials.gov/](https://clinicaltrials.gov/) · [API](https://clinicaltrials.gov/data-api/about-api) |
+| **bioRxiv / medRxiv** | Preprints; flag non-peer-reviewed | [https://www.biorxiv.org/](https://www.biorxiv.org/) · [https://www.medrxiv.org/](https://www.medrxiv.org/) |
 
 ### Cross-plant occurrence
-- **Dr. Duke's Phytochemical and Ethnobotanical Databases** (USDA-ARS,
-  public domain) — terpene occurrence across thousands of plant species;
-  the natural source for a `common_in_other_plants`-style field.
-- **FooDB** — food-source occurrence and aroma/flavor descriptors. Research-
-  use license — check redistribution terms before any bulk mirror.
-- **GBIF / USDA PLANTS** — taxonomic backbone for *Cannabis* and related
-  Cannabaceae species (plant taxonomy context, not cultivar genetics).
+
+| Source | Role | Links |
+|--------|------|--------|
+| **Dr. Duke's Phytochemical and Ethnobotanical Databases** (USDA-ARS / NAL) | Cross-species terpene occurrence; public-domain US government work | [Search](https://phytochem.nal.usda.gov/search) · [Home](https://phytochem.nal.usda.gov/) · [Ag Data Commons record](https://agdatacommons.nal.usda.gov/articles/dataset/Dr_Duke_s_Phytochemical_and_Ethnobotanical_Databases/24660351) |
+| **FooDB** | Food-source occurrence / aroma descriptors; check redistribution | [https://foodb.ca/](https://foodb.ca/) |
+| **GBIF** / **USDA PLANTS** | Taxonomic backbone for *Cannabis* / Cannabaceae | [https://www.gbif.org/](https://www.gbif.org/) · [https://plants.usda.gov/](https://plants.usda.gov/) |
 
 ### Regulatory / safety fields
-- **FDA GRAS Notices database** — public, searchable; fills `fda_gras`.
-- **IFRA standards** — access is restricted/paid; record this as an open gap
-  rather than guessing a value.
-- Seed-to-sale / COA data stays out of this list until a specific source's
-  license is confirmed — do not backfill `coa_panel`-style fields from
-  scraped data.
 
-## Correlated-connections layer
+| Source | Role | Links |
+|--------|------|--------|
+| **FDA GRAS Notices** | Public notices for `fda_gras` where a clean record exists | [https://www.fda.gov/food/generally-recognized-safe-gras/gras-notice-inventory](https://www.fda.gov/food/generally-recognized-safe-gras/gras-notice-inventory) |
+| **IFRA standards** | Restricted/paid access — record as an open gap, do not invent values | [https://ifrafragrance.org/](https://ifrafragrance.org/) |
 
-The point of sourcing openly isn't just filling columns — it's letting the
-schema express relationships across modules instead of leaving each field
-isolated:
+Seed-to-sale / COA bulk data stays out until a specific source’s license is confirmed.
 
-- **Property ↔ pathway** — boiling point/LogP (NIST/PubChem) against
-  biosynthetic class (KEGG) turns "which compounds share an extraction
-  profile" into a join, not a guess.
-- **Pathway ↔ bioactivity** — precursor/enzyme chain (KEGG/MetaCyc) against
-  receptor target (ChEMBL/Open Targets) lets you ask "which co-occurring
-  compounds share both a biosynthetic precursor *and* a receptor target" —
-  the entourage-effect question, answerable structurally instead of
-  anecdotally.
-- **Bioactivity ↔ clinical evidence** — ChEMBL/Open Targets preclinical
-  binding data against ClinicalTrials.gov registered trials gives each
-  `biological_activity` row an `evidence_level` that distinguishes
-  preclinical-only from registered-trial-backed, instead of one flat label.
-- **Occurrence ↔ classification** — Dr. Duke's cross-plant occurrence against
-  ChEBI classification shows whether a reported effect is cannabis-specific
-  or a broader terpenoid-class pattern (e.g., linalool's lavender occurrence
-  contextualizes its own literature independent of cannabis-specific claims).
+## Correlated connections
+
+Open sourcing is not only column fill — it enables joins:
+
+- **Property ↔ pathway** — NIST/PubChem properties vs KEGG class  
+- **Pathway ↔ bioactivity** — KEGG/MetaCyc vs ChEMBL/Open Targets  
+- **Bioactivity ↔ clinical** — preclinical binding vs ClinicalTrials.gov  
+- **Occurrence ↔ classification** — Dr. Duke’s vs ChEBI (e.g. linalool beyond cannabis-only claims)
 
 ## Suggested build order
 
-1. **Compound registry seed** — PubChem bulk pull for the terpenes/terpenoids
-   already named in the design's example schema. Public domain, lowest
-   licensing risk, unblocks everything downstream.
-2. **Classification tree** — ChEBI ontology import for the same compound set.
-3. **Pathway edges** — KEGG terpenoid-biosynthesis maps for precursor/enzyme
-   fields.
-4. **Bioactivity + targets** — ChEMBL/Open Targets/UniProt, each row
-   citation-linked to PubMed.
-5. **Clinical layer** (optional, later) — ClinicalTrials.gov cross-reference,
-   kept clearly separate from preclinical evidence.
-6. **Cross-plant occurrence** — Dr. Duke's for comparative context.
-7. **Regulatory fields** — FDA GRAS only where a clean public record exists;
-   leave IFRA/toxicity marked "gap, needs licensed source" rather than
-   guessing.
+1. **Compound registry seed** — PubChem bulk/API for named terpenes/terpenoids ([PUG REST](https://pubchem.ncbi.nlm.nih.gov/docs/pug-rest))  
+2. **Classification tree** — ChEBI ontology for the same set  
+3. **Pathway edges** — KEGG terpenoid maps  
+4. **Bioactivity + targets** — ChEMBL / Open Targets / UniProt + PubMed citations  
+5. **Clinical layer** (optional) — ClinicalTrials.gov, kept separate from preclinical  
+6. **Cross-plant occurrence** — Dr. Duke’s  
+7. **Regulatory** — FDA GRAS only where clean; IFRA marked gap  
 
-Each phase follows the ETL layering already in the README: raw pull →
-`/staging` normalize → `/core` load, with per-record license and citation
-preserved — not a single bulk "source: PubChem" footnote covering everything.
+Each phase follows README ETL layering: `/raw` → `/staging` → `/core`, with **per-record** license and citation — not a single bulk “source: PubChem” footnote.
 
 ## Explicit non-goals
 
-- Does not include the previously-staged scraped strain/spectra dataset —
-  excluded pending a separate licensing review.
-- Does not stand up the actual Postgres/DuckDB/Neo4j warehouse — this is a
-  sourcing plan, not an implementation.
+- No previously staged scraped strain/spectra corpus until separate license review  
+- No Postgres/DuckDB/Neo4j warehouse in this docs-only repo  
+- No medical advice; clinical links are for evidence structure only  

@@ -1,26 +1,23 @@
 # CMIP — Cannabis Molecular Intelligence Platform
 
-**Status:** schema and architecture notes. **No code and no lab data** live
-in this repo yet.
+**Status:** schema and architecture notes. **No code and no lab data** live in this repo yet.
+
+<p align="center">
+  <img src="docs/assets/cmip-ceo-terpene-cluster-lab.jpg" alt="Concept art: CMIP founder studying a luminous terpene cluster with oversized telescope and microscope in a lab, surrounded by collaborators in beanbag chairs" width="920" />
+</p>
+
+<p align="center"><em>Concept art — founder vision for CMIP (lab coat, terpene cluster, multi-scale observation). Generated for this repo; not a product claim or medical illustration.</em></p>
 
 ## Why this exists
 
-Most “terpene databases” are giant spreadsheets: the same molecule appears
-under five spellings, boiling points show up as bare numbers with no source,
-and aroma wheels get mixed into chemistry columns. CMIP is a design for doing
-that job properly — one place for compounds, cultivars, lab COAs, and the
-links between them — so charts and tools can share a single backbone.
+Most “terpene databases” are giant spreadsheets: the same molecule appears under five spellings, boiling points show up as bare numbers with no source, and aroma wheels get mixed into chemistry columns. CMIP is a design for doing that job properly — one place for compounds, cultivars, lab COAs, and the links between them — so charts and tools can share a single backbone.
 
-## Design principles (in plain language)
+## Design principles
 
-- **One row per real chemical.** Everything else points at it; do not paste
-  the same molecule into ten tables.
-- **Numbers need a story.** A boiling point is not just `177` — units, method,
-  citation, and confidence travel with the value.
-- **Isomers stay distinct.** α-pinene is not β-pinene; cis/trans matter for
-  pathways and effects.
-- **Pretty wheels are not chemistry.** Aroma/flavor/effect taxonomies sit
-  beside the science, not inside the compound record.
+- **One row per real chemical.** Everything else points at it; do not paste the same molecule into ten tables.
+- **Numbers need a story.** A boiling point is not just `177` — units, method, citation, and confidence travel with the value.
+- **Isomers stay distinct.** α-pinene is not β-pinene; cis/trans matter for pathways and effects.
+- **Pretty wheels are not chemistry.** Aroma/flavor/effect taxonomies sit beside the science, not inside the compound record.
 
 ## Layered architecture
 
@@ -37,26 +34,16 @@ Knowledge Layer (literature/patents)
 
 ## Core schema modules
 
-- **Compounds** — the master registry
-- **Synonyms**
-- **Classification** — a real ontology (Organic Compound → Terpenoid →
-  Monoterpenoid → Alcohol → [specific compound]), not flat categories
-- **Functional Chemistry / Properties**
-- **Biological Activity** — structured as
-  `compound / target / effect / species / model / dose / citation /
-  confidence`, never a bare label like "anti-anxiety"
-- **Protein Targets**
-- **Pathways** — the biosynthetic graph (isomer-distinct, per above)
-- **Measurements**
-- **Cultivars**
-- **Genetics** — parent/child graph
-- **Lab Results** (COAs)
-- **Products**
-- **Labs / Instruments**
-- **References**
-- **Visualization layer** — kept separate, as above
+- **Compounds** — the master registry  
+- **Synonyms**  
+- **Classification** — ontology tree (Organic Compound → Terpenoid → Monoterpenoid → …), not flat categories  
+- **Functional Chemistry / Properties**  
+- **Biological Activity** — `compound / target / effect / species / model / dose / citation / confidence`  
+- **Protein Targets** · **Pathways** · **Measurements** · **Cultivars** · **Genetics**  
+- **Lab Results (COAs)** · **Products** · **Labs / Instruments** · **References**  
+- **Visualization layer** — kept separate from chemistry records  
 
-## Storage recommendation (polyglot, not a single database)
+## Storage recommendation (polyglot)
 
 ```
 raw ingestion (versioned XML/JSON/CSV)
@@ -77,63 +64,32 @@ raw ingestion (versioned XML/JSON/CSV)
           cultivar_profiles.parquet, aroma_network.json
 ```
 
-## Example schema: master compound registry
+## Open data first
 
-A representative field list (not a full DDL):
+Planned sourcing (named licenses, no mystery CSVs) is documented in:
 
-```
-compound_id, canonical_name, display_name, compound_group, compound_class,
-subclass, isomer, synonyms, iupac_name, cas, pubchem_cid, chemspider, chebi,
-inchi, inchikey, smiles, formula, molecular_weight, exact_mass,
-boiling_point_c, melting_point_c, density, logP, tpsa, water_solubility,
-ethanol_solubility, biosynthetic_pathway, precursor, enzyme, plant_part,
-occurrence_cannabis, relative_abundance, coa_panel, aroma_primary,
-aroma_secondary, flavor_primary, odor_descriptors, reported_effects,
-receptor_targets, evidence_level, fda_gras, ifra, toxicity_notes,
-color_group, wheel_order, hex_color, notes, source_refs
-```
-
-## Example schema: terpene-specific table
-
-```
-canonical_name, display_name, aliases, parent_class, isomer, aroma_family,
-flavor_notes, common_in_cannabis, relative_abundance, reported_effects,
-evidence_strength, fda_gras, boiling_point_c, molecular_formula,
-pubchem_cid, color_group, wheel_order, notes
-```
+- [docs/OPEN_DATA_SOURCE_PATHWAYS.md](docs/OPEN_DATA_SOURCE_PATHWAYS.md) — module → public sources with **URL hyperlinks**
+- [docs/CONVERSATION_PROVIDERS.md](docs/CONVERSATION_PROVIDERS.md) — how multi-provider design chats are attributed (Grok, ChatGPT, Claude, local models, etc.)
 
 ## What's deliberately not in this repo
 
-No real compound, strain, or spectral data ships here — schema and
-architecture only. If you build a real instance of this design, you'll
-need to source your own licensed chemistry/strain data; be mindful of
-scraping and redistribution terms for any commercial or scraped source
-before republishing it anywhere.
+No real compound, strain, or spectral data ships here — schema and architecture only. Builders must source licensed chemistry/strain data themselves and respect redistribution terms.
 
+## Origin (public)
 
-## How this came to be
+CMIP grew from the need for a **provenance-first** chemistry backbone: messy spreadsheet “databases” kept colliding with caregiving and lab-ops work. Early exploration mixed spreadsheet drafts and multi-provider design conversations; those drafts are **not** published here. This repository is the **docs-only architecture sketch** after a deliberate pivot to open, citable sources.
 
-Alongside caregiving systems, a second thread kept showing up in cloud LLM
-brainstorms: terpene / cultivar data trapped in messy spreadsheets. CMIP is
-the schema answer — one place for chemistry and provenance, not five spellings
-of the same molecule.
+**Timeline anchors:** exploratory design from **22 March 2026**; caregiving focus from **13 April 2026**; public architecture sketch late **July 2026**.
 
-The work lived as staging notes and chat-shaped designs, then as a **docs-only**
-public repo after the ACL deadline week. No proprietary lab dumps in-tree;
-just the shape of the database we wish existed.
-
-**Timeline anchors:** exploratory vibecoding from **22 March 2026**; caregiving
-focus from **13 April 2026**; public architecture sketch late **July 2026**.
+Design conversation providers used across that arc (not data sources) are listed in [docs/CONVERSATION_PROVIDERS.md](docs/CONVERSATION_PROVIDERS.md).
 
 ## License
 
-MIT — see `LICENSE`.
+MIT — see [`LICENSE`](LICENSE).
 
 ## Non-affiliation
 
-This is an independent architecture sketch, not affiliated with,
-endorsed by, or sponsored by any lab, vendor, or database referenced
-generically above.
+This is an independent architecture sketch, not affiliated with, endorsed by, or sponsored by any lab, vendor, or database linked in the docs.
 
 ---
 
