@@ -10,6 +10,14 @@ An earlier private staging pile (strain CSV, structure export, spectra, partiall
 
 This repo stays **schema and architecture only**. Open, named sources — each with access terms — are the planned path into `/core`. Unvetted private piles stay out until independently license-reviewed.
 
+### Lexical viz of the withheld pile (not chemistry)
+
+The withheld corpus is **not science** in this repository: no tables, no spectra files, no COA bodies. What *is* public is a **word-cluster** of the *story* of non-confirmation — license, scrape, provenance, open-path preference — sized by narrative weight:
+
+- [assets/withheld-corpus-lexical-context.svg](assets/withheld-corpus-lexical-context.svg) · [PNG](assets/withheld-corpus-lexical-context.png)
+
+Federal research climate (Schedule III track under the 18 Dec 2025 EO) is separate policy context: [FEDERAL_CANNABIS_RESCHEDULING_CONTEXT.md](FEDERAL_CANNABIS_RESCHEDULING_CONTEXT.md).
+
 ## Scope
 
 Covers **open, license-checked sources only**. Excludes unconfirmed scraped strain/spectra corpora. Everything below is public-domain (e.g. US government / USDA-ARS) or a named database with explicit access notes.

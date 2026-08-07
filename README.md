@@ -71,15 +71,37 @@ Planned sourcing (named licenses, no mystery CSVs) is documented in:
 - [docs/OPEN_DATA_SOURCE_PATHWAYS.md](docs/OPEN_DATA_SOURCE_PATHWAYS.md) — module → public sources with **URL hyperlinks**
 - [docs/CONVERSATION_PROVIDERS.md](docs/CONVERSATION_PROVIDERS.md) — how multi-provider design chats are attributed (Grok, ChatGPT, Claude, local models, etc.)
 
+### Withheld pile — words only, not science
+
+An earlier opportunistic data pile (strain CSV, structure export, spectra, partial Excel) was **never confirmed** for redistribution. It is **not** in this repo and is **not** cited as chemistry evidence. The only public treatment is a **lexical context** viz — word sizes reflect narrative weight in the open-data pivot, not lab measurements:
+
+<p align="center">
+  <img src="docs/assets/withheld-corpus-lexical-context.svg" alt="Word-cluster visualization of the withheld non-cited data pile story: license, provenance, scrape, open sources preferred" width="900" />
+</p>
+
+<p align="center"><em>Not science · not COAs · not compound rows — context words about why that pile stayed out. Pathways: <a href="docs/OPEN_DATA_SOURCE_PATHWAYS.md">OPEN_DATA_SOURCE_PATHWAYS.md</a>.</em></p>
+
+## Federal scheduling context (Schedule III)
+
+President **Donald J. Trump** signed the 18 December 2025 executive order  
+[**Increasing Medical Marijuana and Cannabidiol Research**](https://www.whitehouse.gov/presidential-actions/2025/12/increasing-medical-marijuana-and-cannabidiol-research/),  
+directing the Attorney General to complete rulemaking toward **rescheduling marijuana to Schedule III** of the CSA (see also the [White House fact sheet](https://www.whitehouse.gov/fact-sheets/2025/12/fact-sheet-president-donald-j-trump-is-increasing-medical-marijuana-and-cannabidiol-research/)).  
+
+That EO sits on top of the earlier **May 2024** DOJ/DEA [NPRM](https://www.federalregister.gov/documents/2024/05/21/2024-11137/schedules-of-controlled-substances-rescheduling-of-marijuana) and later DOJ medical-product actions. **Precision matters:** presidential direction ≠ every last CSA row rewritten by ink alone — details and primary links live in:
+
+- [docs/FEDERAL_CANNABIS_RESCHEDULING_CONTEXT.md](docs/FEDERAL_CANNABIS_RESCHEDULING_CONTEXT.md)
+
+CMIP remains **schema + open-source pathways**, not a compliance product.
+
 ## What's deliberately not in this repo
 
-No real compound, strain, or spectral data ships here — schema and architecture only. Builders must source licensed chemistry/strain data themselves and respect redistribution terms.
+No real compound, strain, or spectral data ships here — schema and architecture only. Builders must source licensed chemistry/strain data themselves and respect redistribution terms. The non-confirmed private staging pile is **withheld**, not republished.
 
 ## Origin (public)
 
 CMIP grew from the need for a **provenance-first** chemistry backbone: messy spreadsheet “databases” kept colliding with caregiving and lab-ops work. Early exploration mixed spreadsheet drafts and multi-provider design conversations; those drafts are **not** published here. This repository is the **docs-only architecture sketch** after a deliberate pivot to open, citable sources.
 
-**Timeline anchors:** exploratory design from **22 March 2026**; caregiving focus from **13 April 2026**; public architecture sketch late **July 2026**.
+**Timeline anchors:** exploratory design from **22 March 2026**; caregiving focus from **13 April 2026**; public architecture sketch late **July 2026**; Schedule III policy context documented **August 2026**.
 
 Design conversation providers used across that arc (not data sources) are listed in [docs/CONVERSATION_PROVIDERS.md](docs/CONVERSATION_PROVIDERS.md).
 
