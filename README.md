@@ -71,15 +71,17 @@ Planned sourcing (named licenses, no mystery CSVs) is documented in:
 - [docs/OPEN_DATA_SOURCE_PATHWAYS.md](docs/OPEN_DATA_SOURCE_PATHWAYS.md) — module → public sources with **URL hyperlinks**
 - [docs/CONVERSATION_PROVIDERS.md](docs/CONVERSATION_PROVIDERS.md) — how multi-provider design chats are attributed (Grok, ChatGPT, Claude, local models, etc.)
 
-### Withheld pile — words only, not science
+### Unverified staging — frequency word cloud (not science)
 
-An earlier opportunistic data pile (strain CSV, structure export, spectra, partial Excel) was **never confirmed** for redistribution. It is **not** in this repo and is **not** cited as chemistry evidence. The only public treatment is a **lexical context** viz — word sizes reflect narrative weight in the open-data pivot, not lab measurements:
+Local staging files (large strain scrape CSV, terpene sheets, spectra zip names, etc.) were **never confirmed** for redistribution. **Raw tables are not in this repo** and are **not** cited as chemistry evidence.
+
+What *is* public is a **frequency word cloud**: every cell/token counted; **bigger = more repeats** in that unverified pile (seed banks, flowering, kush, indica, …) — silly-as-data-viz, honest-as-stats:
 
 <p align="center">
-  <img src="docs/assets/withheld-corpus-lexical-context.svg" alt="Word-cluster visualization of the withheld non-cited data pile story: license, provenance, scrape, open sources preferred" width="900" />
+  <img src="docs/assets/withheld-corpus-lexical-context.svg" alt="Frequency word cloud of tokens from unverified local cannabis/terpene staging databases; size proportional to repeat count" width="920" />
 </p>
 
-<p align="center"><em>Not science · not COAs · not compound rows — context words about why that pile stayed out. Pathways: <a href="docs/OPEN_DATA_SOURCE_PATHWAYS.md">OPEN_DATA_SOURCE_PATHWAYS.md</a>.</em></p>
+<p align="center"><em>Unverified words database · size ∝ token frequency · not PubChem · not COAs. Counts: <a href="docs/assets/withheld-corpus-word-frequency.json">withheld-corpus-word-frequency.json</a> · open path: <a href="docs/OPEN_DATA_SOURCE_PATHWAYS.md">OPEN_DATA_SOURCE_PATHWAYS.md</a>.</em></p>
 
 ## Federal scheduling context (Schedule III)
 

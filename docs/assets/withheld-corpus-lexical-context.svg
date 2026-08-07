@@ -1,46 +1,171 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
-<rect width="100%" height="100%" fill="#0f1419"/>
-<text x="600.0" y="36" text-anchor="middle" fill="#c9b896" font-family="system-ui,sans-serif" font-size="20" font-weight="600">Withheld corpus — lexical context only (not lab data · not science)</text>
-<text x="600.0" y="58" text-anchor="middle" fill="#7a8490" font-family="system-ui,sans-serif" font-size="13">Word-size ≈ narrative weight in the open-data pivot · see OPEN_DATA_SOURCE_PATHWAYS.md</text>
-<text x="563.1" y="394.3" text-anchor="middle" fill="#e07a5f" font-family="ui-sans-serif,system-ui,sans-serif" font-size="23" font-weight="600" opacity="0.95">license?</text>
-<text x="605.2" y="327.3" text-anchor="middle" fill="#e07a5f" font-family="ui-sans-serif,system-ui,sans-serif" font-size="22" font-weight="600" opacity="0.95">no paper trail</text>
-<text x="642.0" y="409.4" text-anchor="middle" fill="#e07a5f" font-family="ui-sans-serif,system-ui,sans-serif" font-size="22" font-weight="600" opacity="0.95">withheld</text>
-<text x="522.7" y="360.2" text-anchor="middle" fill="#f2cc8f" font-family="ui-sans-serif,system-ui,sans-serif" font-size="22" font-weight="600" opacity="0.95">word context only</text>
-<text x="674.3" y="336.0" text-anchor="middle" fill="#e07a5f" font-family="ui-sans-serif,system-ui,sans-serif" font-size="20" font-weight="600" opacity="0.95">unverified</text>
-<text x="574.7" y="437.8" text-anchor="middle" fill="#8ecae6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="20" font-weight="600" opacity="0.95">provenance</text>
-<text x="550.7" y="301.6" text-anchor="middle" fill="#f2cc8f" font-family="ui-sans-serif,system-ui,sans-serif" font-size="20" font-weight="600" opacity="0.95">not science</text>
-<text x="709.4" y="398.8" text-anchor="middle" fill="#81b29a" font-family="ui-sans-serif,system-ui,sans-serif" font-size="20" font-weight="600" opacity="0.95">schema only</text>
-<text x="483.5" y="404.6" text-anchor="middle" fill="#e07a5f" font-family="ui-sans-serif,system-ui,sans-serif" font-size="19" font-weight="600" opacity="0.95">scrape</text>
-<text x="657.4" y="281.6" text-anchor="middle" fill="#e07a5f" font-family="ui-sans-serif,system-ui,sans-serif" font-size="19" font-weight="600" opacity="0.95">redistribution</text>
-<text x="643.4" y="469.6" text-anchor="middle" fill="#81b29a" font-family="ui-sans-serif,system-ui,sans-serif" font-size="19" font-weight="600" opacity="0.95">open source first</text>
-<text x="466.3" y="314.2" text-anchor="middle" fill="#8ecae6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="19" font-weight="600" opacity="0.95">not in /core</text>
-<text x="760.2" y="344.6" text-anchor="middle" fill="#8ecae6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="18" font-weight="600" opacity="0.95">spreadsheet</text>
-<text x="500.2" y="472.2" text-anchor="middle" fill="#81b29a" font-family="ui-sans-serif,system-ui,sans-serif" font-size="18" font-weight="600" opacity="0.95">PubChem path</text>
-<text x="576.5" y="239.3" text-anchor="middle" fill="#e07a5f" font-family="ui-sans-serif,system-ui,sans-serif" font-size="18" font-weight="600" opacity="0.95">pending review</text>
-<text x="747.2" y="459.3" text-anchor="middle" fill="#8ecae6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="18" font-weight="600" opacity="0.95">strain CSV</text>
-<text x="398.2" y="376.0" text-anchor="middle" fill="#8ecae6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="18" font-weight="600" opacity="0.95">terpene</text>
-<text x="749.9" y="262.6" text-anchor="middle" fill="#8ecae6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="17" font-weight="600" opacity="0.95">structure dump</text>
-<text x="589.8" y="529.0" text-anchor="middle" fill="#81b29a" font-family="ui-sans-serif,system-ui,sans-serif" font-size="17" font-weight="600" opacity="0.95">citation</text>
-<text x="452.3" y="242.6" text-anchor="middle" fill="#8ecae6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="17" font-weight="600" opacity="0.95">verify</text>
-<text x="837.9" y="393.0" text-anchor="middle" fill="#8ecae6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="17" font-weight="600" opacity="0.95">no bulk mirror</text>
-<text x="395.2" y="472.6" text-anchor="middle" fill="#8ecae6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="16" font-weight="600" opacity="0.95">spectra</text>
-<text x="656.8" y="188.1" text-anchor="middle" fill="#e07a5f" font-family="ui-sans-serif,system-ui,sans-serif" font-size="16" font-weight="600" opacity="0.95">ToS</text>
-<text x="733.5" y="537.7" text-anchor="middle" fill="#81b29a" font-family="ui-sans-serif,system-ui,sans-serif" font-size="16" font-weight="600" opacity="0.95">confidence</text>
-<text x="335.2" y="309.2" text-anchor="middle" fill="#e07a5f" font-family="ui-sans-serif,system-ui,sans-serif" font-size="16" font-weight="600" opacity="0.95">toss</text>
-<text x="861.0" y="283.2" text-anchor="middle" fill="#8ecae6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="16" font-weight="600" opacity="0.95">CMIP</text>
-<text x="485.3" y="567.3" text-anchor="middle" fill="#8ecae6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="15" font-weight="600" opacity="0.95">synonym chaos</text>
-<text x="496.3" y="162.3" text-anchor="middle" fill="#8ecae6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="15" font-weight="600" opacity="0.95">COA?</text>
-<text x="879.7" y="475.8" text-anchor="middle" fill="#81b29a" font-family="ui-sans-serif,system-ui,sans-serif" font-size="15" font-weight="600" opacity="0.95">ChEBI</text>
-<text x="285.3" y="429.7" text-anchor="middle" fill="#8ecae6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="15" font-weight="600" opacity="0.95">cultivar</text>
-<text x="781.2" y="167.1" text-anchor="middle" fill="#f2cc8f" font-family="ui-sans-serif,system-ui,sans-serif" font-size="15" font-weight="600" opacity="0.95">Schedule III context</text>
-<text x="658.4" y="614.5" text-anchor="middle" fill="#8ecae6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="14" font-weight="600" opacity="0.95">five spellings</text>
-<text x="320.1" y="213.9" text-anchor="middle" fill="#8ecae6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="14" font-weight="600" opacity="0.95">aroma wheel ≠ chemistry</text>
-<text x="962.3" y="348.4" text-anchor="middle" fill="#8ecae6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="14" font-weight="600" opacity="0.95">research access</text>
-<text x="346.7" y="567.1" text-anchor="middle" fill="#8ecae6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="13" font-weight="600" opacity="0.95">ETL /raw</text>
-<text x="601.9" y="94.6" text-anchor="middle" fill="#81b29a" font-family="ui-sans-serif,system-ui,sans-serif" font-size="13" font-weight="600" opacity="0.95">public domain later</text>
-<text x="863.4" y="579.0" text-anchor="middle" fill="#8ecae6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="13" font-weight="600" opacity="0.95">isomer</text>
-<text x="200.2" y="343.3" text-anchor="middle" fill="#8ecae6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="13" font-weight="600" opacity="0.95">staging</text>
-<text x="927.4" y="191.1" text-anchor="middle" fill="#8ecae6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="12" font-weight="600" opacity="0.95">coder codes</text>
-<text x="524.7" y="667.9" text-anchor="middle" fill="#8ecae6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="11" font-weight="600" opacity="0.95">stoners stay</text>
-<text x="600.0" y="682" text-anchor="middle" fill="#5c6670" font-family="system-ui,sans-serif" font-size="12">No compound rows · no COAs · no scraped bodies in this repo — only words about why that pile stayed out</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="950" viewBox="0 0 1500 950">
+<rect width="100%" height="100%" fill="#0a0e12"/>
+<text x="750.0" y="32" text-anchor="middle" fill="#f8f9fa" font-family="system-ui,sans-serif" font-size="24" font-weight="700">Unverified words database — frequency cloud</text>
+<text x="750.0" y="54" text-anchor="middle" fill="#adb5bd" font-family="system-ui,sans-serif" font-size="14">Size ∝ how often a token repeats in the staged (non-cited) strain/terpene/spectra-filename corpus</text>
+<text x="750.0" y="74" text-anchor="middle" fill="#6c757d" font-family="system-ui,sans-serif" font-size="12">15,790 CSV rows · 27.2 MB staged · 44,943 unique tokens · top 160 drawn · raw files not shipped in-repo</text>
+<text x="726.9" y="504.2" text-anchor="middle" fill="#ff9f1c" font-family="ui-sans-serif,system-ui,sans-serif" font-size="68" font-weight="700" opacity="0.96"><title>seeds × 33977</title>seeds</text>
+<text x="781.5" y="433.0" text-anchor="middle" fill="#ff9f1c" font-family="ui-sans-serif,system-ui,sans-serif" font-size="59" font-weight="700" opacity="0.96"><title>seed × 19690</title>seed</text>
+<text x="748.2" y="573.2" text-anchor="middle" fill="#ff9f1c" font-family="ui-sans-serif,system-ui,sans-serif" font-size="58" font-weight="700" opacity="0.96"><title>genetics × 18148</title>genetics</text>
+<text x="914.7" y="497.8" text-anchor="middle" fill="#ffbf69" font-family="ui-sans-serif,system-ui,sans-serif" font-size="55" font-weight="700" opacity="0.96"><title>attitude × 15507</title>attitude</text>
+<text x="685.2" y="553.4" text-anchor="middle" fill="#ffbf69" font-family="ui-sans-serif,system-ui,sans-serif" font-size="54" font-weight="700" opacity="0.96"><title>feminized × 14420</title>feminized</text>
+<text x="630.6" y="415.6" text-anchor="middle" fill="#ffbf69" font-family="ui-sans-serif,system-ui,sans-serif" font-size="53" font-weight="700" opacity="0.96"><title>cannabis × 13364</title>cannabis</text>
+<text x="584.3" y="488.1" text-anchor="middle" fill="#ffbf69" font-family="ui-sans-serif,system-ui,sans-serif" font-size="49" font-weight="700" opacity="0.96"><title>strain × 11010</title>strain</text>
+<text x="769.9" y="373.8" text-anchor="middle" fill="#ffbf69" font-family="ui-sans-serif,system-ui,sans-serif" font-size="48" font-weight="700" opacity="0.96"><title>bank × 10291</title>bank</text>
+<text x="1326.9" y="477.2" text-anchor="middle" fill="#ffbf69" font-family="ui-sans-serif,system-ui,sans-serif" font-size="48" font-weight="700" opacity="0.96"><title>flowering × 9918</title>flowering</text>
+<text x="885.9" y="437.9" text-anchor="middle" fill="#ffbf69" font-family="ui-sans-serif,system-ui,sans-serif" font-size="45" font-weight="700" opacity="0.96"><title>high × 8336</title>high</text>
+<text x="920.2" y="564.9" text-anchor="middle" fill="#ffbf69" font-family="ui-sans-serif,system-ui,sans-serif" font-size="45" font-weight="700" opacity="0.96"><title>auto × 8315</title>auto</text>
+<text x="726.3" y="630.6" text-anchor="middle" fill="#ffbf69" font-family="ui-sans-serif,system-ui,sans-serif" font-size="44" font-weight="700" opacity="0.96"><title>sweet × 8135</title>sweet</text>
+<text x="879.7" y="384.5" text-anchor="middle" fill="#ffbf69" font-family="ui-sans-serif,system-ui,sans-serif" font-size="44" font-weight="700" opacity="0.96"><title>time × 7925</title>time</text>
+<text x="669.8" y="360.6" text-anchor="middle" fill="#ffbf69" font-family="ui-sans-serif,system-ui,sans-serif" font-size="44" font-weight="700" opacity="0.96"><title>indica × 7813</title>indica</text>
+<text x="760.7" y="575.8" text-anchor="middle" fill="#ffbf69" font-family="ui-sans-serif,system-ui,sans-serif" font-size="43" font-weight="700" opacity="0.96"><title>cannabis-seeds-bank × 7728</title>cannabis-seeds-bank</text>
+<text x="321.1" y="514.6" text-anchor="middle" fill="#ffbf69" font-family="ui-sans-serif,system-ui,sans-serif" font-size="43" font-weight="700" opacity="0.96"><title>photoperiod × 7643</title>photoperiod</text>
+<text x="531.8" y="551.9" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="42" font-weight="700" opacity="0.96"><title>yield × 7228</title>yield</text>
+<text x="863.2" y="636.1" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="41" font-weight="700" opacity="0.96"><title>sativa × 6908</title>sativa</text>
+<text x="973.9" y="437.0" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="41" font-weight="700" opacity="0.96"><title>plant × 6821</title>plant</text>
+<text x="876.7" y="334.3" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="41" font-weight="700" opacity="0.96"><title>outdoor × 6783</title>outdoor</text>
+<text x="617.9" y="648.6" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="41" font-weight="700" opacity="0.96"><title>indoor × 6762</title>indoor</text>
+<text x="736.3" y="299.4" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="41" font-weight="700" opacity="0.96"><title>product × 6545</title>product</text>
+<text x="760.9" y="681.6" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="40" font-weight="700" opacity="0.96"><title>medium × 6285</title>medium</text>
+<text x="480.2" y="503.5" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="40" font-weight="700" opacity="0.96"><title>kush × 6259</title>kush</text>
+<text x="511.7" y="596.9" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="39" font-weight="700" opacity="0.96"><title>north × 6018</title>north</text>
+<text x="524.6" y="355.5" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="39" font-weight="700" opacity="0.96"><title>atlantic × 5866</title>atlantic</text>
+<text x="454.7" y="447.4" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="38" font-weight="700" opacity="0.96"><title>regular × 5713</title>regular</text>
+<text x="978.3" y="382.7" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="38" font-weight="700" opacity="0.96"><title>days × 5508</title>days</text>
+<text x="997.1" y="567.6" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="37" font-weight="700" opacity="0.96"><title>thc × 5260</title>thc</text>
+<text x="980.4" y="621.5" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="36" font-weight="700" opacity="0.96"><title>buds × 5115</title>buds</text>
+<text x="483.6" y="404.2" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="35" font-weight="700" opacity="0.96"><title>weeks × 4781</title>weeks</text>
+<text x="1069.1" y="484.5" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="35" font-weight="700" opacity="0.96"><title>hybrid × 4700</title>hybrid</text>
+<text x="638.2" y="297.6" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="34" font-weight="700" opacity="0.96"><title>fast × 4440</title>fast</text>
+<text x="658.6" y="696.8" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="32" font-weight="700" opacity="0.96"><title>height × 4085</title>height</text>
+<text x="1053.7" y="522.6" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="31" font-weight="700" opacity="0.96"><title>has × 3781</title>has</text>
+<text x="870.6" y="287.9" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="31" font-weight="700" opacity="0.96"><title>purple × 3753</title>purple</text>
+<text x="858.0" y="681.4" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="31" font-weight="700" opacity="0.96"><title>aroma × 3739</title>aroma</text>
+<text x="1052.7" y="433.1" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="31" font-weight="700" opacity="0.96"><title>cms × 3728</title>cms</text>
+<text x="426.3" y="560.7" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="31" font-weight="700" opacity="0.96"><title>fruity × 3715</title>fruity</text>
+<text x="538.1" y="662.3" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="31" font-weight="700" opacity="0.96"><title>cbd × 3672</title>cbd</text>
+<text x="1008.3" y="342.3" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="30" font-weight="700" opacity="0.96"><title>effects × 3426</title>effects</text>
+<text x="549.9" y="301.9" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="29" font-weight="700" opacity="0.96"><title>haze × 3353</title>haze</text>
+<text x="654.4" y="257.7" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="29" font-weight="700" opacity="0.96"><title>citrus × 3346</title>citrus</text>
+<text x="1054.0" y="617.7" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="29" font-weight="700" opacity="0.96"><title>she × 3297</title>she</text>
+<text x="971.9" y="293.6" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="29" font-weight="700" opacity="0.96"><title>very × 3281</title>very</text>
+<text x="785.1" y="739.4" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="29" font-weight="700" opacity="0.96"><title>flavour × 3271</title>flavour</text>
+<text x="468.4" y="665.0" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="29" font-weight="700" opacity="0.96"><title>premium × 3234</title>premium</text>
+<text x="781.6" y="230.2" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="28" font-weight="700" opacity="0.96"><title>company × 3204</title>company</text>
+<text x="993.5" y="699.9" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="28" font-weight="700" opacity="0.96"><title>awards × 3129</title>awards</text>
+<text x="351.2" y="444.5" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="28" font-weight="700" opacity="0.96"><title>earthy × 3070</title>earthy</text>
+<text x="1096.3" y="340.4" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="28" font-weight="700" opacity="0.96"><title>buy × 3059</title>buy</text>
+<text x="643.6" y="761.9" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="27" font-weight="700" opacity="0.96"><title>lemon × 2972</title>lemon</text>
+<text x="550.6" y="236.9" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="27" font-weight="700" opacity="0.96"><title>shipping × 2964</title>shipping</text>
+<text x="1159.6" y="588.2" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="27" font-weight="700" opacity="0.96"><title>seedsman × 2961</title>seedsman</text>
+<text x="341.9" y="604.8" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="27" font-weight="700" opacity="0.96"><title>effect × 2959</title>effect</text>
+<text x="938.2" y="216.1" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="27" font-weight="700" opacity="0.96"><title>online × 2953</title>online</text>
+<text x="889.8" y="782.0" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="27" font-weight="700" opacity="0.96"><title>diesel × 2943</title>diesel</text>
+<text x="345.8" y="335.4" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="27" font-weight="700" opacity="0.96"><title>northatlanticseed × 2935</title>northatlanticseed</text>
+<text x="1211.4" y="420.0" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="27" font-weight="700" opacity="0.96"><title>voted × 2931</title>voted</text>
+<text x="476.0" y="754.5" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="27" font-weight="700" opacity="0.96"><title>ica × 2930</title>ica</text>
+<text x="684.2" y="166.0" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="27" font-weight="700" opacity="0.96"><title>sour × 2901</title>sour</text>
+<text x="1131.2" y="702.4" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="26" font-weight="700" opacity="0.96"><title>relaxing × 2848</title>relaxing</text>
+<text x="1105.5" y="250.0" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="26" font-weight="700" opacity="0.96"><title>but × 2790</title>but</text>
+<text x="729.6" y="832.0" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="26" font-weight="700" opacity="0.96"><title>skunk × 2775</title>skunk</text>
+<text x="415.1" y="224.7" text-anchor="middle" fill="#2ec4b6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="26" font-weight="700" opacity="0.96"><title>harvest × 2756</title>harvest</text>
+<text x="1272.1" y="534.8" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="25" font-weight="700" opacity="0.96"><title>which × 2695</title>which</text>
+<text x="313.6" y="696.1" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="25" font-weight="700" opacity="0.96"><title>white × 2677</title>white</text>
+<text x="865.5" y="135.6" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="25" font-weight="700" opacity="0.96"><title>marijuana × 2677</title>marijuana</text>
+<text x="1026.1" y="807.9" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="25" font-weight="700" opacity="0.96"><title>autoflowering × 2672</title>autoflowering</text>
+<text x="218.4" y="378.9" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="25" font-weight="700" opacity="0.96"><title>grow × 2595</title>grow</text>
+<text x="1260.9" y="329.3" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="24" font-weight="700" opacity="0.96"><title>taste × 2537</title>taste</text>
+<text x="532.5" y="844.3" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="24" font-weight="700" opacity="0.96"><title>experience × 2479</title>experience</text>
+<text x="550.3" y="125.6" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="24" font-weight="700" opacity="0.96"><title>yields × 2457</title>yields</text>
+<text x="1271.6" y="670.8" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="24" font-weight="700" opacity="0.96"><title>cookies × 2434</title>cookies</text>
+<text x="175.7" y="594.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="24" font-weight="700" opacity="0.96"><title>green × 2425</title>green</text>
+<text x="1072.7" y="149.2" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="23" font-weight="700" opacity="0.96"><title>indoors × 2397</title>indoors</text>
+<text x="857.2" y="892.2" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="23" font-weight="700" opacity="0.96"><title>neptune × 2393</title>neptune</text>
+<text x="259.2" y="238.8" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="23" font-weight="700" opacity="0.96"><title>strains × 2341</title>strains</text>
+<text x="327.4" y="799.8" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="23" font-weight="700" opacity="0.96"><title>lineage × 2327</title>lineage</text>
+<text x="749.1" y="100.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="23" font-weight="700" opacity="0.96"><title>outdoors × 2308</title>outdoors</text>
+<text x="1183.4" y="805.9" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="23" font-weight="700" opacity="0.96"><title>profile × 2291</title>profile</text>
+<text x="104.1" y="452.7" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="23" font-weight="700" opacity="0.96"><title>short × 2288</title>short</text>
+<text x="1269.9" y="222.3" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="23" font-weight="700" opacity="0.96"><title>strong × 2288</title>strong</text>
+<text x="635.4" y="914.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="23" font-weight="700" opacity="0.96"><title>one × 2282</title>one</text>
+<text x="389.0" y="111.2" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="22" font-weight="700" opacity="0.96"><title>area × 2257</title>area</text>
+<text x="1405.7" y="607.3" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="22" font-weight="700" opacity="0.96"><title>growing × 2250</title>growing</text>
+<text x="141.4" y="702.4" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="22" font-weight="700" opacity="0.96"><title>heavy × 2239</title>heavy</text>
+<text x="987.1" y="100.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="22" font-weight="700" opacity="0.96"><title>tall × 2202</title>tall</text>
+<text x="1018.7" y="914.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="22" font-weight="700" opacity="0.96"><title>great × 2194</title>great</text>
+<text x="107.2" y="289.4" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="22" font-weight="700" opacity="0.96"><title>have × 2167</title>have</text>
+<text x="1433.6" y="345.7" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="21" font-weight="700" opacity="0.96"><title>uplifting × 2129</title>uplifting</text>
+<text x="387.7" y="910.1" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="21" font-weight="700" opacity="0.96"><title>neptuneseedbank × 2064</title>neptuneseedbank</text>
+<text x="591.8" y="100.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="21" font-weight="700" opacity="0.96"><title>euphoric × 2056</title>euphoric</text>
+<text x="1355.7" y="774.3" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="21" font-weight="700" opacity="0.96"><title>expect × 2050</title>expect</text>
+<text x="60.0" y="555.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="20" font-weight="700" opacity="0.96"><title>perfect × 1977</title>perfect</text>
+<text x="1235.6" y="103.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="20" font-weight="700" opacity="0.96"><title>flavor × 1965</title>flavor</text>
+<text x="782.6" y="914.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="20" font-weight="700" opacity="0.96"><title>potent × 1949</title>potent</text>
+<text x="206.0" y="125.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="20" font-weight="700" opacity="0.96"><title>resin × 1945</title>resin</text>
+<text x="152.7" y="824.8" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="19" font-weight="700" opacity="0.96"><title>cherry × 1888</title>cherry</text>
+<text x="853.6" y="100.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="19" font-weight="700" opacity="0.96"><title>variety × 1842</title>variety</text>
+<text x="1203.9" y="914.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="19" font-weight="700" opacity="0.96"><title>blue × 1839</title>blue</text>
+<text x="60.0" y="373.1" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="19" font-weight="700" opacity="0.96"><title>body × 1815</title>body</text>
+<text x="1440.0" y="220.2" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="18" font-weight="700" opacity="0.96"><title>best × 1741</title>best</text>
+<text x="503.2" y="914.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="18" font-weight="700" opacity="0.96"><title>big × 1740</title>big</text>
+<text x="1440.0" y="702.4" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="18" font-weight="700" opacity="0.96"><title>light × 1734</title>light</text>
+<text x="60.0" y="679.1" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="18" font-weight="700" opacity="0.96"><title>black × 1731</title>black</text>
+<text x="1139.1" y="100.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="18" font-weight="700" opacity="0.96"><title>pine × 1721</title>pine</text>
+<text x="966.9" y="914.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="18" font-weight="700" opacity="0.96"><title>dense × 1695</title>dense</text>
+<text x="60.0" y="181.5" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="17" font-weight="700" opacity="0.96"><title>super × 1689</title>super</text>
+<text x="1440.0" y="391.4" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="17" font-weight="700" opacity="0.96"><title>house × 1674</title>house</text>
+<text x="218.9" y="914.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="17" font-weight="700" opacity="0.96"><title>orange × 1663</title>orange</text>
+<text x="676.3" y="100.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="17" font-weight="700" opacity="0.96"><title>well × 1651</title>well</text>
+<text x="1400.1" y="891.5" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="17" font-weight="700" opacity="0.96"><title>notes × 1621</title>notes</text>
+<text x="60.0" y="488.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="17" font-weight="700" opacity="0.96"><title>fem × 1606</title>fem</text>
+<text x="1415.4" y="100.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="17" font-weight="700" opacity="0.96"><title>candy × 1601</title>candy</text>
+<text x="199.7" y="100.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="16" font-weight="700" opacity="0.96"><title>queen × 1592</title>queen</text>
+<text x="60.0" y="817.5" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="16" font-weight="700" opacity="0.96"><title>bud × 1584</title>bud</text>
+<text x="60.0" y="275.6" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="16" font-weight="700" opacity="0.96"><title>berry × 1558</title>berry</text>
+<text x="1440.0" y="254.3" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="16" font-weight="700" opacity="0.96"><title>potency × 1550</title>potency</text>
+<text x="472.0" y="100.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="16" font-weight="700" opacity="0.96"><title>royal × 1540</title>royal</text>
+<text x="1440.0" y="809.2" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="16" font-weight="700" opacity="0.96"><title>banana × 1539</title>banana</text>
+<text x="60.0" y="624.9" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="16" font-weight="700" opacity="0.96"><title>sex × 1528</title>sex</text>
+<text x="1305.1" y="100.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="16" font-weight="700" opacity="0.96"><title>blueberry × 1526</title>blueberry</text>
+<text x="871.2" y="914.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="16" font-weight="700" opacity="0.96"><title>gelato × 1507</title>gelato</text>
+<text x="60.0" y="100.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="16" font-weight="700" opacity="0.96"><title>medical × 1507</title>medical</text>
+<text x="1440.0" y="465.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="16" font-weight="700" opacity="0.96"><title>easy × 1503</title>easy</text>
+<text x="60.0" y="914.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="15" font-weight="700" opacity="0.96"><title>cake × 1492</title>cake</text>
+<text x="1388.0" y="914.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="15" font-weight="700" opacity="0.96"><title>cheese × 1487</title>cheese</text>
+<text x="60.0" y="397.9" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="15" font-weight="700" opacity="0.96"><title>growers × 1484</title>growers</text>
+<text x="60.0" y="774.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="15" font-weight="700" opacity="0.96"><title>strawberry × 1484</title>strawberry</text>
+<text x="1092.9" y="914.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="15" font-weight="700" opacity="0.96"><title>dominant × 1465</title>dominant</text>
+<text x="1440.0" y="316.4" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="15" font-weight="700" opacity="0.96"><title>around × 1445</title>around</text>
+<text x="186.4" y="914.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="15" font-weight="700" opacity="0.96"><title>t16 × 1445</title>t16</text>
+<text x="1440.0" y="914.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="15" font-weight="700" opacity="0.96"><title>creative × 1435</title>creative</text>
+<text x="741.3" y="914.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="15" font-weight="700" opacity="0.96"><title>t02 × 1431</title>t02</text>
+<text x="1440.0" y="557.9" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="14" font-weight="700" opacity="0.96"><title>good × 1413</title>good</text>
+<text x="944.8" y="100.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="14" font-weight="700" opacity="0.96"><title>making × 1407</title>making</text>
+<text x="1319.3" y="914.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="14" font-weight="700" opacity="0.96"><title>flowers × 1400</title>flowers</text>
+<text x="1440.0" y="160.9" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="14" font-weight="700" opacity="0.96"><title>conditions × 1369</title>conditions</text>
+<text x="342.0" y="100.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="14" font-weight="700" opacity="0.96"><title>powerful × 1365</title>powerful</text>
+<text x="60.0" y="704.4" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="14" font-weight="700" opacity="0.96"><title>beans × 1365</title>beans</text>
+<text x="60.0" y="449.4" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="14" font-weight="700" opacity="0.96"><title>even × 1360</title>even</text>
+<text x="592.3" y="914.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="14" font-weight="700" opacity="0.96"><title>runtz × 1356</title>runtz</text>
+<text x="117.7" y="100.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="14" font-weight="700" opacity="0.96"><title>cerebral × 1350</title>cerebral</text>
+<text x="1440.0" y="661.9" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="14" font-weight="700" opacity="0.96"><title>pack × 1342</title>pack</text>
+<text x="60.0" y="862.6" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="14" font-weight="700" opacity="0.96"><title>cross × 1340</title>cross</text>
+<text x="1106.5" y="100.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="14" font-weight="700" opacity="0.96"><title>gas × 1338</title>gas</text>
+<text x="1440.0" y="500.2" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="14" font-weight="700" opacity="0.96"><title>spicy × 1338</title>spicy</text>
+<text x="60.0" y="344.4" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="13" font-weight="700" opacity="0.96"><title>production × 1335</title>production</text>
+<text x="1440.0" y="768.4" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="13" font-weight="700" opacity="0.96"><title>grape × 1315</title>grape</text>
+<text x="60.0" y="512.3" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="13" font-weight="700" opacity="0.96"><title>experimental × 1314</title>experimental</text>
+<text x="679.8" y="914.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="13" font-weight="700" opacity="0.96"><title>relaxation × 1295</title>relaxation</text>
+<text x="1027.0" y="100.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="13" font-weight="700" opacity="0.96"><title>cream × 1291</title>cream</text>
+<text x="60.0" y="236.2" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="13" font-weight="700" opacity="0.96"><title>fruit × 1288</title>fruit</text>
+<text x="270.0" y="914.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="13" font-weight="700" opacity="0.96"><title>punch × 1275</title>punch</text>
+<text x="1440.0" y="433.3" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="13" font-weight="700" opacity="0.96"><title>multiverse × 1273</title>multiverse</text>
+<text x="1192.9" y="100.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="13" font-weight="700" opacity="0.96"><title>long × 1268</title>long</text>
+<text x="60.0" y="128.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="13" font-weight="700" opacity="0.96"><title>average × 1267</title>average</text>
+<text x="111.1" y="914.0" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="13" font-weight="700" opacity="0.96"><title>original × 1262</title>original</text>
+<text x="60.0" y="582.2" text-anchor="middle" fill="#cbf3f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="13" font-weight="700" opacity="0.96"><title>critical × 1259</title>critical</text>
+<rect x="24" y="862" width="320" height="64" rx="8" fill="#151a21" stroke="#2b3340"/>
+<text x="40" y="888" fill="#ff9f1c" font-family="system-ui" font-size="13" font-weight="700">■ top repeaters</text>
+<text x="40" y="908" fill="#2ec4b6" font-family="system-ui" font-size="13" font-weight="700">■ mid frequency</text>
+<text x="160" y="908" fill="#cbf3f0" font-family="system-ui" font-size="13" font-weight="700">■ long tail</text>
+<text x="750.0" y="936" text-anchor="middle" fill="#495057" font-family="system-ui" font-size="12">Not science · not COAs · not open-data /core — frequency viz of unverified staging words only</text>
 </svg>

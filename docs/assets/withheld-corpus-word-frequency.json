@@ -1,0 +1,417 @@
+{
+  "schema": "cmip_unverified_word_frequency_viz.v1",
+  "method": "whitespace/comma tokenize all cell text + spectra zip basenames; count frequencies; size by log-count",
+  "disclaimer": "Unverified local staging. Raw databases NOT committed. Not scientific evidence. Open sources preferred: docs/OPEN_DATA_SOURCE_PATHWAYS.md",
+  "rows_tokenized": 15790,
+  "bytes_tokenized": 27179911,
+  "unique_tokens": 44943,
+  "source_basenames": [
+    "Cannabis_Intelligence_Database_15768_Strains_Final.csv",
+    "terpenes_cleaned.csv",
+    "terpenes.csv",
+    "terpenes.ods",
+    "cannabisdb_spectra (1).zip"
+  ],
+  "top_100": [
+    {
+      "token": "seeds",
+      "count": 33977
+    },
+    {
+      "token": "seed",
+      "count": 19690
+    },
+    {
+      "token": "genetics",
+      "count": 18148
+    },
+    {
+      "token": "attitude",
+      "count": 15507
+    },
+    {
+      "token": "feminized",
+      "count": 14420
+    },
+    {
+      "token": "cannabis",
+      "count": 13364
+    },
+    {
+      "token": "strain",
+      "count": 11010
+    },
+    {
+      "token": "bank",
+      "count": 10291
+    },
+    {
+      "token": "flowering",
+      "count": 9918
+    },
+    {
+      "token": "high",
+      "count": 8336
+    },
+    {
+      "token": "auto",
+      "count": 8315
+    },
+    {
+      "token": "sweet",
+      "count": 8135
+    },
+    {
+      "token": "time",
+      "count": 7925
+    },
+    {
+      "token": "indica",
+      "count": 7813
+    },
+    {
+      "token": "cannabis-seeds-bank",
+      "count": 7728
+    },
+    {
+      "token": "photoperiod",
+      "count": 7643
+    },
+    {
+      "token": "yield",
+      "count": 7228
+    },
+    {
+      "token": "sativa",
+      "count": 6908
+    },
+    {
+      "token": "plant",
+      "count": 6821
+    },
+    {
+      "token": "outdoor",
+      "count": 6783
+    },
+    {
+      "token": "indoor",
+      "count": 6762
+    },
+    {
+      "token": "product",
+      "count": 6545
+    },
+    {
+      "token": "medium",
+      "count": 6285
+    },
+    {
+      "token": "kush",
+      "count": 6259
+    },
+    {
+      "token": "north",
+      "count": 6018
+    },
+    {
+      "token": "atlantic",
+      "count": 5866
+    },
+    {
+      "token": "regular",
+      "count": 5713
+    },
+    {
+      "token": "days",
+      "count": 5508
+    },
+    {
+      "token": "thc",
+      "count": 5260
+    },
+    {
+      "token": "buds",
+      "count": 5115
+    },
+    {
+      "token": "weeks",
+      "count": 4781
+    },
+    {
+      "token": "hybrid",
+      "count": 4700
+    },
+    {
+      "token": "fast",
+      "count": 4440
+    },
+    {
+      "token": "height",
+      "count": 4085
+    },
+    {
+      "token": "has",
+      "count": 3781
+    },
+    {
+      "token": "purple",
+      "count": 3753
+    },
+    {
+      "token": "aroma",
+      "count": 3739
+    },
+    {
+      "token": "cms",
+      "count": 3728
+    },
+    {
+      "token": "fruity",
+      "count": 3715
+    },
+    {
+      "token": "cbd",
+      "count": 3672
+    },
+    {
+      "token": "effects",
+      "count": 3426
+    },
+    {
+      "token": "haze",
+      "count": 3353
+    },
+    {
+      "token": "citrus",
+      "count": 3346
+    },
+    {
+      "token": "she",
+      "count": 3297
+    },
+    {
+      "token": "very",
+      "count": 3281
+    },
+    {
+      "token": "flavour",
+      "count": 3271
+    },
+    {
+      "token": "premium",
+      "count": 3234
+    },
+    {
+      "token": "company",
+      "count": 3204
+    },
+    {
+      "token": "awards",
+      "count": 3129
+    },
+    {
+      "token": "earthy",
+      "count": 3070
+    },
+    {
+      "token": "buy",
+      "count": 3059
+    },
+    {
+      "token": "lemon",
+      "count": 2972
+    },
+    {
+      "token": "shipping",
+      "count": 2964
+    },
+    {
+      "token": "seedsman",
+      "count": 2961
+    },
+    {
+      "token": "effect",
+      "count": 2959
+    },
+    {
+      "token": "online",
+      "count": 2953
+    },
+    {
+      "token": "diesel",
+      "count": 2943
+    },
+    {
+      "token": "northatlanticseed",
+      "count": 2935
+    },
+    {
+      "token": "voted",
+      "count": 2931
+    },
+    {
+      "token": "ica",
+      "count": 2930
+    },
+    {
+      "token": "sour",
+      "count": 2901
+    },
+    {
+      "token": "relaxing",
+      "count": 2848
+    },
+    {
+      "token": "but",
+      "count": 2790
+    },
+    {
+      "token": "skunk",
+      "count": 2775
+    },
+    {
+      "token": "harvest",
+      "count": 2756
+    },
+    {
+      "token": "which",
+      "count": 2695
+    },
+    {
+      "token": "white",
+      "count": 2677
+    },
+    {
+      "token": "marijuana",
+      "count": 2677
+    },
+    {
+      "token": "autoflowering",
+      "count": 2672
+    },
+    {
+      "token": "grow",
+      "count": 2595
+    },
+    {
+      "token": "taste",
+      "count": 2537
+    },
+    {
+      "token": "experience",
+      "count": 2479
+    },
+    {
+      "token": "yields",
+      "count": 2457
+    },
+    {
+      "token": "cookies",
+      "count": 2434
+    },
+    {
+      "token": "green",
+      "count": 2425
+    },
+    {
+      "token": "indoors",
+      "count": 2397
+    },
+    {
+      "token": "neptune",
+      "count": 2393
+    },
+    {
+      "token": "strains",
+      "count": 2341
+    },
+    {
+      "token": "lineage",
+      "count": 2327
+    },
+    {
+      "token": "outdoors",
+      "count": 2308
+    },
+    {
+      "token": "profile",
+      "count": 2291
+    },
+    {
+      "token": "short",
+      "count": 2288
+    },
+    {
+      "token": "strong",
+      "count": 2288
+    },
+    {
+      "token": "one",
+      "count": 2282
+    },
+    {
+      "token": "area",
+      "count": 2257
+    },
+    {
+      "token": "growing",
+      "count": 2250
+    },
+    {
+      "token": "heavy",
+      "count": 2239
+    },
+    {
+      "token": "tall",
+      "count": 2202
+    },
+    {
+      "token": "great",
+      "count": 2194
+    },
+    {
+      "token": "have",
+      "count": 2167
+    },
+    {
+      "token": "uplifting",
+      "count": 2129
+    },
+    {
+      "token": "neptuneseedbank",
+      "count": 2064
+    },
+    {
+      "token": "euphoric",
+      "count": 2056
+    },
+    {
+      "token": "expect",
+      "count": 2050
+    },
+    {
+      "token": "perfect",
+      "count": 1977
+    },
+    {
+      "token": "flavor",
+      "count": 1965
+    },
+    {
+      "token": "potent",
+      "count": 1949
+    },
+    {
+      "token": "resin",
+      "count": 1945
+    },
+    {
+      "token": "cherry",
+      "count": 1888
+    },
+    {
+      "token": "variety",
+      "count": 1842
+    }
+  ]
+}

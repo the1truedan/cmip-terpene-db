@@ -66,9 +66,9 @@ On **~23–24 April 2026**, the Justice Department announced actions **in accord
 |-------|------------|------------------|
 | **Open, citable sources** | PubChem, ChEBI, KEGG, NIST, ChEMBL, Dr. Duke’s, … | [OPEN_DATA_SOURCE_PATHWAYS.md](OPEN_DATA_SOURCE_PATHWAYS.md) |
 | **Withheld private staging pile** | Earlier opportunistic CSV / structure / spectra / partial Excel — **no clear redistribution trail** | Same doc · **not loaded into this repo** |
-| **Lexical context viz only** | Word-cluster of the *story* of that withheld pile (not measurements) | [assets/withheld-corpus-lexical-context.svg](assets/withheld-corpus-lexical-context.svg) |
+| **Frequency word cloud only** | Token counts from the unverified pile (size ∝ repeats; not measurements) | [assets/withheld-corpus-lexical-context.svg](assets/withheld-corpus-lexical-context.svg) · [frequency JSON](assets/withheld-corpus-word-frequency.json) |
 
-**The withheld pile is not science in this repo.** It is not cited as evidence. Word-level visualization only marks **why** those bytes stayed out: license unknown, paper trail missing, open sources preferred.
+**The withheld pile is not science in this repo.** It is not cited as evidence. The public viz is **silly-but-honest word frequency** of unverified staging text — not open chemistry for `/core`.
 
 ## Non-affiliation & medical disclaimer
 
