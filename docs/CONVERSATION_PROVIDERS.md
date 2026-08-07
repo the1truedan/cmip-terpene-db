@@ -20,7 +20,7 @@ CMIP’s public materials are human-edited architecture notes. Multi-provider ch
 |--------|---------------------|
 | PubChem, ChEBI, KEGG, ChEMBL, NIST, USDA, etc. | **Data / knowledge sources** — see open-data pathways |
 | Private lab COAs or scraped strain dumps | **Out of scope** until license-reviewed; not conversation |
-| Hippo / internal agent memory | Private ops tooling; not published here |
+| Internal agent memory systems | Private ops tooling; not published here |
 
 ## Attribution rule
 
