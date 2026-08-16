@@ -3,6 +3,15 @@
 All notable changes to **cmip-terpene-db** are documented here.
 Format inspired by [Keep a Changelog](https://keepachangelog.com/).
 
+## [0.2.1] — 2026-08-16
+
+### Changed
+
+- Origin section shows the storyboard **once** (the sheet). The eight
+  individual panels stacked under it were the same comic again.
+- Hero now carries a quiet original Δ9-THCA-A skeleton (PubChem CID 98523
+  2D coords, redrawn). No Elsevier figure, no red “THCA” title.
+
 ## [0.2.0] — 2026-08-16
 
 ### Added

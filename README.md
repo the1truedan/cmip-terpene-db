@@ -1,12 +1,12 @@
 # CMIP — Cannabis Molecular Intelligence Platform
 
-[![Version](https://img.shields.io/badge/version-0.2.0-2ec4b6.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-0.2.1-2ec4b6.svg)](CHANGELOG.md)
 [![Pages](https://img.shields.io/badge/pages-cmip--terpene--db-ff9f1c.svg)](https://the1truedan.github.io/cmip-terpene-db/)
 
 **Status:** schema and architecture notes. **No code and no lab data** live in this repo yet.
 
 **Site:** [the1truedan.github.io/cmip-terpene-db](https://the1truedan.github.io/cmip-terpene-db/) ·
-**Release:** [`v0.2.0`](CHANGELOG.md)
+**Release:** [`v0.2.1`](CHANGELOG.md)
 
 <p align="center">
   <img src="docs/assets/cmip-origin-storyboard-sheet.jpg" alt="Eight-panel comic storyboard: how CMIP came to be — vibecode, look up terpenes, collect data, stoners gather, verify, toss unverified data, stoners stay, coder still codes" width="920" />

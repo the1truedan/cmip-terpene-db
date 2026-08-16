@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 442.4 465.6" fill="none" role="img" aria-labelledby="thcaTitle thcaDesc">
+  <title id="thcaTitle">Δ9-tetrahydrocannabinolic acid A</title>
+  <desc id="thcaDesc">Original skeletal formula redrawn from public PubChem 2D coordinates (CID 98523). Carboxylic acid on the olivetol ring, pentyl chain, closed pyran, cyclohexene with C9 methyl. No paper figure was copied.</desc>
+  <g class="bonds" stroke="#7ee0d4" stroke-width="2.15" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="308.7" y1="266.1" x2="344.0" y2="245.7"/>
+    <line x1="296.2" y1="266.1" x2="260.9" y2="245.7"/>
+    <line x1="218.4" y1="132.6" x2="217.9" y2="172.1"/>
+    <line x1="98.7" y1="192.2" x2="133.0" y2="172.6"/>
+    <line x1="344.0" y1="197.7" x2="302.4" y2="173.7"/>
+    <line x1="344.0" y1="197.7" x2="344.0" y2="245.7"/>
+    <line x1="344.0" y1="197.7" x2="387.7" y2="173.4"/>
+    <line x1="302.4" y1="173.7" x2="260.9" y2="197.7"/>
+    <line x1="302.4" y1="173.7" x2="301.7" y2="123.7"/>
+    <line x1="344.0" y1="245.7" x2="368.0" y2="287.3"/>
+    <line x1="344.0" y1="245.7" x2="392.0" y2="245.7"/>
+    <line x1="387.7" y1="173.4" x2="388.1" y2="123.4"/>
+    <line x1="260.9" y1="197.7" x2="217.9" y2="172.1"/>
+    <line x1="388.1" y1="123.4" x2="344.8" y2="98.4"/>
+    <line x1="344.8" y1="98.4" x2="344.6" y2="50.4"/>
+    <line x1="260.9" y1="245.7" x2="217.9" y2="271.4"/>
+    <line x1="174.5" y1="246.7" x2="174.5" y2="196.7"/>
+    <line x1="174.5" y1="246.7" x2="133.0" y2="270.9"/>
+    <line x1="174.5" y1="196.7" x2="133.0" y2="172.6"/>
+    <line x1="133.0" y1="270.9" x2="133.2" y2="318.9"/>
+    <line x1="133.2" y1="318.9" x2="91.7" y2="343.0"/>
+    <line x1="91.7" y1="343.0" x2="91.9" y2="391.0"/>
+    <line x1="91.9" y1="391.0" x2="50.4" y2="415.2"/>
+  </g>
+  <g class="double" stroke="#7ee0d4" stroke-width="2.15" stroke-linecap="round">
+    <line x1="133.1" y1="133.1" x2="133.0" y2="172.6"/>
+    <line x1="128.7" y1="137.5" x2="128.6" y2="168.0"/>
+    <line x1="260.9" y1="197.7" x2="260.9" y2="245.7"/>
+    <line x1="256.5" y1="202.2" x2="256.5" y2="241.2"/>
+    <line x1="301.7" y1="123.7" x2="344.8" y2="98.4"/>
+    <line x1="307.8" y1="125.2" x2="343.1" y2="104.5"/>
+    <line x1="217.9" y1="172.1" x2="174.5" y2="196.7"/>
+    <line x1="211.9" y1="170.5" x2="176.2" y2="190.7"/>
+    <line x1="217.9" y1="271.4" x2="174.5" y2="246.7"/>
+    <line x1="216.2" y1="265.3" x2="180.5" y2="245.1"/>
+  </g>
+  <g class="hetero" fill="#ff9f1c" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="600">
+    <text x="302.4" y="270.7" text-anchor="middle" dominant-baseline="middle">O</text>
+    <text x="218.5" y="121.1" text-anchor="middle" dominant-baseline="middle">OH</text>
+    <text x="87.8" y="198.4" text-anchor="end" dominant-baseline="middle">OH</text>
+    <text x="133.2" y="122.6" text-anchor="middle" dominant-baseline="middle">O</text>
+  </g>
+</svg>

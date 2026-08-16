@@ -2,6 +2,7 @@
 
 | File / dir | Description |
 |------------|-------------|
+| [thca-skeleton.svg](thca-skeleton.svg) | Original Δ9-THCA-A skeleton from PubChem CID 98523 2D coords. Not a journal figure. |
 | [cmip-origin-storyboard-sheet.jpg](cmip-origin-storyboard-sheet.jpg) | **Primary hero** — 8-panel origin comic (mok-tua FaceID). |
 | [origin-storyboard/](origin-storyboard/) | Individual panels 01–08 + sheet + notes. |
 | [withheld-corpus-lexical-context.svg](withheld-corpus-lexical-context.svg) | **Frequency word cloud** of unverified staging tokens (size ∝ repeats). |

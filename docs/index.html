@@ -31,7 +31,17 @@
   ::selection { background: var(--accent); color: var(--bg); }
 
   .hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--line); }
-  #ring-rain { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.55; }
+  #ring-rain { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.22; }
+  .thca-skel {
+    position: absolute; left: 50%; top: 54%;
+    width: min(640px, 88vw); height: auto;
+    transform: translate(-50%, -48%);
+    color: var(--accent-soft);
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 0;
+    filter: drop-shadow(0 0 18px rgba(46,196,182,0.12));
+  }
   .hero-inner {
     position: relative; z-index: 1; max-width: 920px; margin: 0 auto;
     padding: 5.5rem 1.5rem 4rem; text-align: center;
@@ -115,19 +125,6 @@
     font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   }
 
-  .panel-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.7rem;
-  }
-  .panel-grid figure {
-    margin: 0; background: var(--bg-panel); border: 1px solid var(--line);
-    border-radius: 6px; overflow: hidden;
-  }
-  .panel-grid img { display: block; width: 100%; height: auto; }
-  .panel-grid figcaption {
-    padding: 0.45rem 0.55rem; font-size: 0.72rem; color: var(--fg-dimmer);
-    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-  }
-
   .story { max-width: 62ch; margin: 0 auto; }
   .story p { color: var(--fg-dim); margin: 0 0 1rem; }
   .story strong { color: var(--fg); }
@@ -167,27 +164,26 @@
   .mu-mark span { color: var(--accent-mu); }
 
   @media (max-width: 720px) {
-    .stack-grid, .shots.pair, .panel-grid { grid-template-columns: 1fr 1fr; }
-  }
-  @media (max-width: 480px) {
-    .panel-grid { grid-template-columns: 1fr; }
+    .stack-grid, .shots.pair { grid-template-columns: 1fr 1fr; }
   }
   @media (prefers-reduced-motion: reduce) { #ring-rain { display: none; } }
+  @media (max-width: 720px) { .thca-skel { opacity: 0.16; width: 94vw; } }
 </style>
 </head>
 <body>
 
 <div class="hero">
   <canvas id="ring-rain" aria-hidden="true"></canvas>
+  <img class="thca-skel" src="assets/thca-skeleton.svg" alt="Δ9-THCA-A skeletal formula" />
   <div class="hero-inner">
     <p class="eyebrow">schema + architecture · no lab data in-repo</p>
     <h1 class="wordmark"><span>CMIP</span></h1>
     <p class="tagline">One place for compounds, cultivars, and lab COAs — so charts stop fighting five spellings of the same molecule.</p>
     <div class="hero-cta">
       <a class="btn primary" href="https://github.com/the1truedan/cmip-terpene-db">View on GitHub</a>
-      <a class="btn" href="https://github.com/the1truedan/cmip-terpene-db/releases/tag/v0.2.0">v0.2.0</a>
+      <a class="btn" href="https://github.com/the1truedan/cmip-terpene-db/releases/tag/v0.2.1">v0.2.1</a>
       <a class="btn" href="https://the1truedan.github.io/mok-tua/">mok-tua</a>
-      <span class="version-chip">v<b>0.2.0</b> · MIT · public</span>
+      <span class="version-chip">v<b>0.2.1</b> · MIT · public</span>
     </div>
   </div>
 </div>
@@ -310,40 +306,6 @@ raw (unchanged sources)
     <figure class="shot">
       <img src="assets/cmip-origin-storyboard-sheet.jpg" alt="Eight-panel origin storyboard: vibecode, look up terpenes, collect data, stoners gather, verify, toss unverified data, stoners stay, coder still codes" />
       <figcaption>Origin sheet — founder FaceID panels via mok-tua (local Comfy)</figcaption>
-    </figure>
-  </div>
-  <div class="panel-grid" style="margin-top:1.2rem">
-    <figure>
-      <img src="assets/origin-storyboard/01_vibecode.jpg" alt="Panel 1: vibecoding the schema idea" />
-      <figcaption>1 · vibecode</figcaption>
-    </figure>
-    <figure>
-      <img src="assets/origin-storyboard/02_lookup.jpg" alt="Panel 2: looking up terpenes" />
-      <figcaption>2 · look up</figcaption>
-    </figure>
-    <figure>
-      <img src="assets/origin-storyboard/03_collect.jpg" alt="Panel 3: collecting messy data" />
-      <figcaption>3 · collect</figcaption>
-    </figure>
-    <figure>
-      <img src="assets/origin-storyboard/04_stoners_arrive.jpg" alt="Panel 4: people gather" />
-      <figcaption>4 · they arrive</figcaption>
-    </figure>
-    <figure>
-      <img src="assets/origin-storyboard/05_verify.jpg" alt="Panel 5: verification check" />
-      <figcaption>5 · verify</figcaption>
-    </figure>
-    <figure>
-      <img src="assets/origin-storyboard/06_toss.jpg" alt="Panel 6: unverified data tossed" />
-      <figcaption>6 · toss</figcaption>
-    </figure>
-    <figure>
-      <img src="assets/origin-storyboard/07_stoners_stay.jpg" alt="Panel 7: people still hang around" />
-      <figcaption>7 · they stay</figcaption>
-    </figure>
-    <figure>
-      <img src="assets/origin-storyboard/08_coder_codes.jpg" alt="Panel 8: coder still codes" />
-      <figcaption>8 · still codes</figcaption>
     </figure>
   </div>
 </section>
