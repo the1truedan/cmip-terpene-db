@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CMIP — Cannabis Molecular Intelligence Platform</title>
+<meta name="description" content="Schema ideas for cannabis and hemp chemistry without spreadsheet chaos. One row per real chemical. Numbers carry a source. No lab data in this repo." />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<style>
+  :root {
+    --bg: #0a0e12;
+    --bg-panel: #12181c;
+    --bg-panel-2: #171f24;
+    --line: #2a363c;
+    --fg: #e8efe8;
+    --fg-dim: #8fa39a;
+    --fg-dimmer: #5c6e68;
+    --accent: #2ec4b6;
+    --accent-soft: #7ee0d4;
+    --accent-mu: #ff9f1c;
+    --leaf: #7dce82;
+    --lilac: #c9a0ff;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); }
+  body {
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    line-height: 1.6; -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  ::selection { background: var(--accent); color: var(--bg); }
+
+  .hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--line); }
+  #ring-rain { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.55; }
+  .hero-inner {
+    position: relative; z-index: 1; max-width: 920px; margin: 0 auto;
+    padding: 5.5rem 1.5rem 4rem; text-align: center;
+  }
+  .eyebrow {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--accent-soft); margin: 0 0 1.4rem;
+  }
+  .wordmark {
+    margin: 0;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-weight: 700; font-size: clamp(2.4rem, 8vw, 4.6rem);
+    letter-spacing: 0.04em;
+    text-shadow: 0 0 8px rgba(46,196,182,0.4), 0 0 28px rgba(255,159,28,0.16);
+  }
+  .wordmark span { color: var(--accent); }
+  .tagline {
+    max-width: 48ch; margin: 1.4rem auto 0; font-size: 1.1rem;
+    color: var(--fg-dim); text-wrap: balance;
+  }
+  .hero-cta {
+    display: flex; justify-content: center; align-items: center;
+    gap: 0.9rem; flex-wrap: wrap; margin-top: 2.4rem;
+  }
+  .btn {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.85rem; text-decoration: none; padding: 0.65rem 1.1rem;
+    border-radius: 3px; border: 1px solid var(--line);
+    background: var(--bg-panel); color: var(--fg);
+  }
+  .btn:hover { border-color: var(--accent); color: var(--accent-soft); }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); font-weight: 600; }
+  .btn.primary:hover { background: var(--accent-soft); }
+  .version-chip {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.78rem; color: var(--fg-dimmer);
+  }
+  .version-chip b { color: var(--accent-mu); }
+
+  section.band { max-width: 980px; margin: 0 auto; padding: 4.2rem 1.5rem; }
+  .section-head { text-align: center; margin-bottom: 2.6rem; }
+  .section-eyebrow {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--fg-dimmer); margin: 0 0 0.7rem;
+  }
+  .section-title { margin: 0; font-size: 1.5rem; font-weight: 600; text-wrap: balance; }
+  .section-sub { max-width: 54ch; margin: 0.7rem auto 0; color: var(--fg-dim); }
+
+  .stack-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px;
+    background: var(--line); border: 1px solid var(--line); border-radius: 6px; overflow: hidden;
+  }
+  .stack-card {
+    background: var(--bg-panel); padding: 1.5rem 1.4rem; display: flex;
+    flex-direction: column; gap: 0.5rem; text-decoration: none; min-height: 148px;
+  }
+  a.stack-card:hover { background: var(--bg-panel-2); }
+  .stack-card .role {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--accent-soft);
+  }
+  .stack-card h3 { margin: 0; font-size: 1.08rem; }
+  .stack-card p { margin: 0; font-size: 0.9rem; color: var(--fg-dim); flex-grow: 1; }
+  .stack-card .link-hint {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.74rem; color: var(--accent-mu);
+  }
+
+  .shots { display: grid; grid-template-columns: 1fr; gap: 1.2rem; }
+  .shots.pair { grid-template-columns: 1fr 1fr; }
+  .shot {
+    background: var(--bg-panel); border: 1px solid var(--line);
+    border-radius: 8px; overflow: hidden;
+  }
+  .shot img { display: block; width: 100%; height: auto; }
+  .shot figcaption {
+    padding: 0.75rem 1rem; font-size: 0.82rem; color: var(--fg-dimmer);
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+
+  .panel-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.7rem;
+  }
+  .panel-grid figure {
+    margin: 0; background: var(--bg-panel); border: 1px solid var(--line);
+    border-radius: 6px; overflow: hidden;
+  }
+  .panel-grid img { display: block; width: 100%; height: auto; }
+  .panel-grid figcaption {
+    padding: 0.45rem 0.55rem; font-size: 0.72rem; color: var(--fg-dimmer);
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+
+  .story { max-width: 62ch; margin: 0 auto; }
+  .story p { color: var(--fg-dim); margin: 0 0 1rem; }
+  .story strong { color: var(--fg); }
+  .tl {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.78rem; color: var(--accent-soft);
+  }
+  pre {
+    background: var(--bg-panel); border: 1px solid var(--line);
+    border-radius: 6px; padding: 1rem 1.1rem; overflow-x: auto;
+    font-size: 0.82rem; color: var(--accent-soft); text-align: left;
+  }
+
+  .callout {
+    background: var(--bg-panel); border: 1px solid var(--line);
+    border-left: 3px solid var(--accent-mu); border-radius: 6px;
+    padding: 1.1rem 1.2rem; color: var(--fg-dim); max-width: 62ch; margin: 0 auto;
+  }
+  .callout strong { color: var(--fg); }
+
+  footer { border-top: 1px solid var(--line); padding: 2.4rem 1.5rem 3rem; }
+  .footer-inner {
+    max-width: 980px; margin: 0 auto; display: flex;
+    justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-links {
+    display: flex; gap: 1.4rem; flex-wrap: wrap;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.8rem; color: var(--fg-dim);
+  }
+  .footer-links a { text-decoration: none; }
+  .footer-links a:hover { color: var(--accent-soft); }
+  .mu-mark {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.8rem; color: var(--fg-dimmer);
+  }
+  .mu-mark span { color: var(--accent-mu); }
+
+  @media (max-width: 720px) {
+    .stack-grid, .shots.pair, .panel-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 480px) {
+    .panel-grid { grid-template-columns: 1fr; }
+  }
+  @media (prefers-reduced-motion: reduce) { #ring-rain { display: none; } }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <canvas id="ring-rain" aria-hidden="true"></canvas>
+  <div class="hero-inner">
+    <p class="eyebrow">schema + architecture · no lab data in-repo</p>
+    <h1 class="wordmark"><span>CMIP</span></h1>
+    <p class="tagline">One place for compounds, cultivars, and lab COAs — so charts stop fighting five spellings of the same molecule.</p>
+    <div class="hero-cta">
+      <a class="btn primary" href="https://github.com/the1truedan/cmip-terpene-db">View on GitHub</a>
+      <a class="btn" href="https://github.com/the1truedan/cmip-terpene-db/releases/tag/v0.2.0">v0.2.0</a>
+      <a class="btn" href="https://the1truedan.github.io/mok-tua/">mok-tua</a>
+      <span class="version-chip">v<b>0.2.0</b> · MIT · public</span>
+    </div>
+  </div>
+</div>
+
+<section class="band">
+  <div class="section-head">
+    <p class="section-eyebrow">why this exists</p>
+    <h2 class="section-title">Spreadsheets keep lying about chemistry.</h2>
+    <p class="section-sub">The same terpene shows up under five names. A boiling point is a bare number with no source. Aroma wheels get mixed into science columns. CMIP is a design for doing that job once, then sharing it.</p>
+  </div>
+  <div class="stack-grid">
+    <div class="stack-card">
+      <span class="role">identity</span>
+      <h3>One row per real chemical</h3>
+      <p>Everything else points at it. Do not paste α-pinene into ten tables and hope the spellings stay friends.</p>
+    </div>
+    <div class="stack-card">
+      <span class="role">provenance</span>
+      <h3>Numbers need a story</h3>
+      <p>A boiling point is not just <code>177</code>. Units, method, citation, and confidence travel with the value.</p>
+    </div>
+    <div class="stack-card">
+      <span class="role">isomers</span>
+      <h3>α-pinene is not β-pinene</h3>
+      <p>Cis/trans and stereo matter for pathways and effects. Flatten them and the graph is fiction.</p>
+    </div>
+    <div class="stack-card">
+      <span class="role">layers</span>
+      <h3>Pretty wheels are not chemistry</h3>
+      <p>Aroma, flavor, and effect taxonomies sit beside the science. They do not live inside the compound record.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="section-head">
+    <p class="section-eyebrow">how it is supposed to stack</p>
+    <h2 class="section-title">Literature in. Charts out. Nothing mixed in the middle.</h2>
+  </div>
+<pre>Knowledge Layer (literature / patents)
+  → Reference Tables
+  → Chemistry
+  → Cultivars
+  → Lab Results (Certificates of Analysis)
+  → Retail Products
+  → Genetics
+  → Visualization
+
+raw (unchanged sources)
+  → staging (parsed, checked)
+  → core (compounds, cultivars, measurements, citations)
+  → marts (wheels, profiles, networks)</pre>
+</section>
+
+<section class="band">
+  <div class="section-head">
+    <p class="section-eyebrow">named sources, not mystery CSVs</p>
+    <h2 class="section-title">Open data first. Models do not invent molecules.</h2>
+    <p class="section-sub">Planned loaders would pull from public databases with licenses written down. Unvetted scrapes stay out.</p>
+  </div>
+  <div class="stack-grid">
+    <a class="stack-card" href="https://pubchem.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">
+      <span class="role">identity</span>
+      <h3>PubChem</h3>
+      <p>CIDs, synonyms, InChI, SMILES, formula, mass. Public domain. The seed for a compound registry.</p>
+      <span class="link-hint">pubchem.ncbi.nlm.nih.gov →</span>
+    </a>
+    <a class="stack-card" href="https://www.ebi.ac.uk/chebi/" target="_blank" rel="noopener">
+      <span class="role">ontology</span>
+      <h3>ChEBI</h3>
+      <p>Parent/child tree: Organic Compound → Terpenoid → Monoterpenoid. Not a flat dropdown.</p>
+      <span class="link-hint">ebi.ac.uk/chebi →</span>
+    </a>
+    <a class="stack-card" href="https://webbook.nist.gov/chemistry/" target="_blank" rel="noopener">
+      <span class="role">properties</span>
+      <h3>NIST WebBook</h3>
+      <p>Boiling points and friends with literature citations. Per-record pull, not a bulk scrape.</p>
+      <span class="link-hint">webbook.nist.gov →</span>
+    </a>
+    <a class="stack-card" href="https://www.ebi.ac.uk/chembl/" target="_blank" rel="noopener">
+      <span class="role">activity</span>
+      <h3>ChEMBL</h3>
+      <p>Assays as compound / target / effect / confidence. Binding is not a blog post.</p>
+      <span class="link-hint">ebi.ac.uk/chembl →</span>
+    </a>
+    <a class="stack-card" href="https://www.genome.jp/kegg/pathway.html" target="_blank" rel="noopener">
+      <span class="role">pathways</span>
+      <h3>KEGG</h3>
+      <p>Terpenoid backbone and monoterpenoid maps. Academic/non-commercial free; commercial needs a license.</p>
+      <span class="link-hint">genome.jp/kegg →</span>
+    </a>
+    <a class="stack-card" href="https://phytochem.nal.usda.gov/" target="_blank" rel="noopener">
+      <span class="role">occurrence</span>
+      <h3>Dr. Duke’s</h3>
+      <p>USDA-ARS phytochemical occurrence across plants. Linalool is not a cannabis-only claim.</p>
+      <span class="link-hint">phytochem.nal.usda.gov →</span>
+    </a>
+    <a class="stack-card" href="OPEN_DATA_SOURCE_PATHWAYS.md">
+      <span class="role">the map</span>
+      <h3>Open-data pathways</h3>
+      <p>Module → source → URL → license note. UniProt, Open Targets, ClinicalTrials.gov, FooDB, and the rest live here.</p>
+      <span class="link-hint">OPEN_DATA_SOURCE_PATHWAYS.md →</span>
+    </a>
+    <a class="stack-card" href="https://the1truedan.github.io/mok-tua/">
+      <span class="role">the pictures</span>
+      <h3>mok-tua</h3>
+      <p>Origin comic and lab art were rendered on a local Comfy box, FaceID from a public founder still. Not a cloud image API.</p>
+      <span class="link-hint">the1truedan.github.io/mok-tua →</span>
+    </a>
+  </div>
+</section>
+
+<section class="band">
+  <div class="section-head">
+    <p class="section-eyebrow">origin</p>
+    <h2 class="section-title">Look it up. Collect the pile. Toss what you cannot cite.</h2>
+    <p class="section-sub">Eight-panel comic via mok-tua FaceID. The stoners stay. The unverified rows do not.</p>
+  </div>
+  <div class="shots">
+    <figure class="shot">
+      <img src="assets/cmip-origin-storyboard-sheet.jpg" alt="Eight-panel origin storyboard: vibecode, look up terpenes, collect data, stoners gather, verify, toss unverified data, stoners stay, coder still codes" />
+      <figcaption>Origin sheet — founder FaceID panels via mok-tua (local Comfy)</figcaption>
+    </figure>
+  </div>
+  <div class="panel-grid" style="margin-top:1.2rem">
+    <figure>
+      <img src="assets/origin-storyboard/01_vibecode.jpg" alt="Panel 1: vibecoding the schema idea" />
+      <figcaption>1 · vibecode</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/origin-storyboard/02_lookup.jpg" alt="Panel 2: looking up terpenes" />
+      <figcaption>2 · look up</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/origin-storyboard/03_collect.jpg" alt="Panel 3: collecting messy data" />
+      <figcaption>3 · collect</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/origin-storyboard/04_stoners_arrive.jpg" alt="Panel 4: people gather" />
+      <figcaption>4 · they arrive</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/origin-storyboard/05_verify.jpg" alt="Panel 5: verification check" />
+      <figcaption>5 · verify</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/origin-storyboard/06_toss.jpg" alt="Panel 6: unverified data tossed" />
+      <figcaption>6 · toss</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/origin-storyboard/07_stoners_stay.jpg" alt="Panel 7: people still hang around" />
+      <figcaption>7 · they stay</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/origin-storyboard/08_coder_codes.jpg" alt="Panel 8: coder still codes" />
+      <figcaption>8 · still codes</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="band">
+  <div class="section-head">
+    <p class="section-eyebrow">the picture, not the data</p>
+    <h2 class="section-title">A lab that holds myrcene, pinene, limonene, and linalool apart.</h2>
+  </div>
+  <div class="shots">
+    <figure class="shot">
+      <img src="assets/cmip-terpene-cluster-lab-concept.jpg" alt="Illustrated lab: a chemist holds a brass scope over a glowing cluster of myrcene, pinene, limonene, and linalool while people lounge on beanbags" />
+      <figcaption>Concept art — clusters are distinct molecules, not a flavor wheel</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="band">
+  <div class="section-head">
+    <p class="section-eyebrow">unverified staging · not science</p>
+    <h2 class="section-title">The scrape pile is withheld. This cloud is just how often words repeat.</h2>
+    <p class="section-sub">Bigger type = more repeats in a local strain/terpene/spectra-filename dump that never got a license review. Not PubChem. Not COAs. Raw tables are not in this repo.</p>
+  </div>
+  <div class="shots">
+    <figure class="shot">
+      <img src="assets/withheld-corpus-lexical-context.svg" alt="Frequency word cloud of tokens from an unverified local cannabis and terpene staging pile; size proportional to repeat count" />
+      <figcaption>15,790 staged rows counted · 44,943 unique tokens · top 160 drawn</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="band">
+  <div class="section-head">
+    <p class="section-eyebrow">what is deliberately missing</p>
+    <h2 class="section-title">No compounds. No strains. No spectra. No medical advice.</h2>
+  </div>
+  <div class="callout">
+    Builders source licensed chemistry themselves. The private staging pile stays private until someone can show a paper trail. This repository is the architecture sketch after that pivot — not a compliance product, not a warehouse, not a chart that pretends a spreadsheet was a database.
+  </div>
+</section>
+
+<section class="band">
+  <div class="section-head">
+    <p class="section-eyebrow">why scheduling shows up in a schema repo</p>
+    <h2 class="section-title">Research access changes whether citable chemistry is worth building.</h2>
+  </div>
+  <div class="story">
+    <p>On <strong>18 December 2025</strong> President Trump signed the executive order <a href="https://www.whitehouse.gov/presidential-actions/2025/12/increasing-medical-marijuana-and-cannabidiol-research/">Increasing Medical Marijuana and Cannabidiol Research</a>, directing the Attorney General to finish rulemaking toward <strong>Schedule III</strong>.</p>
+    <p>That is <strong>direction to complete a process</strong>, not a one-line rewrite of every CSA row. A May 2024 DOJ/DEA proposal and later 2026 DOJ medical-product actions sit on the same track. Precision lives in <a href="FEDERAL_CANNABIS_RESCHEDULING_CONTEXT.md">FEDERAL_CANNABIS_RESCHEDULING_CONTEXT.md</a>.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="section-head">
+    <p class="section-eyebrow">who talked, who is cited</p>
+    <h2 class="section-title">Design chats are not data sources.</h2>
+    <p class="section-sub">Grok, ChatGPT, Claude, and local models helped sketch the shape. PubChem still has to say the molecule exists.</p>
+  </div>
+  <div class="stack-grid">
+    <a class="stack-card" href="CONVERSATION_PROVIDERS.md">
+      <span class="role">design</span>
+      <h3>Conversation providers</h3>
+      <p>Who brainstormed schema and licensing language. No chat dumps. No session IDs. Human owns the published text.</p>
+      <span class="link-hint">CONVERSATION_PROVIDERS.md →</span>
+    </a>
+    <a class="stack-card" href="https://github.com/the1truedan/cmip-terpene-db/blob/main/CONTRIBUTING.md">
+      <span class="role">commits</span>
+      <h3>AI trailers</h3>
+      <p>Co-authored notes name the assisting model. They are provenance, not a claim the model shipped unsupervised.</p>
+      <span class="link-hint">CONTRIBUTING.md →</span>
+    </a>
+  </div>
+</section>
+
+<section class="band">
+  <div class="section-head">
+    <p class="section-eyebrow">how it came to be</p>
+    <h2 class="section-title">Caregiving work collided with spreadsheet “databases.”</h2>
+  </div>
+  <div class="story">
+    <p>CMIP started as a need for a <strong>provenance-first</strong> chemistry backbone. Early drafts mixed private scrapes and multi-provider design chats. Those drafts are not published here.</p>
+    <p><span class="tl">22 March 2026</span> — exploratory design. <span class="tl">13 April 2026</span> — caregiving focus. <span class="tl">Late July 2026</span> — public architecture sketch. <span class="tl">August 2026</span> — Schedule III context written down; this page.</p>
+    <p>Independent. Not affiliated with any lab or database linked above. © 2026 M.A.N.A.G.E.R. LLC — <em>prepare for the care when we cannot be there</em>.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <span class="mu-mark">one row per molecule · citations over <span>vibes</span></span>
+    <nav class="footer-links">
+      <a href="https://github.com/the1truedan/cmip-terpene-db/blob/main/README.md">README</a>
+      <a href="https://github.com/the1truedan/cmip-terpene-db/blob/main/CHANGELOG.md">Changelog</a>
+      <a href="https://github.com/the1truedan/cmip-terpene-db/blob/main/LICENSE">MIT</a>
+      <a href="https://the1truedan.github.io/mok-tua/">mok-tua</a>
+      <a href="https://the1truedan.github.io/ai-gateway/">ai-gateway</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var canvas = document.getElementById('ring-rain');
+  if (!canvas || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var ctx = canvas.getContext('2d');
+  var hero = canvas.parentElement;
+  var nodes = [], rings = [];
+  var colors = ['#2ec4b6', '#ff9f1c', '#7dce82', '#c9a0ff'];
+  function size() {
+    var r = hero.getBoundingClientRect();
+    canvas.width = r.width; canvas.height = r.height;
+    nodes = []; rings = [];
+    var i, n = Math.max(18, Math.floor(r.width / 55));
+    for (i = 0; i < n; i++) {
+      nodes.push({
+        x: Math.random() * r.width,
+        y: Math.random() * r.height,
+        v: 0.25 + Math.random() * 0.45,
+        r: 2 + Math.random() * 3.2,
+        c: colors[i % colors.length]
+      });
+    }
+    var m = Math.max(6, Math.floor(r.width / 180));
+    for (i = 0; i < m; i++) {
+      rings.push({
+        x: Math.random() * r.width,
+        y: Math.random() * r.height,
+        v: 0.12 + Math.random() * 0.25,
+        s: 10 + Math.random() * 18,
+        a: Math.random() * Math.PI
+      });
+    }
+  }
+  size();
+  window.addEventListener('resize', size);
+  function hex(cx, cy, s, a) {
+    var i, x, y;
+    ctx.beginPath();
+    for (i = 0; i < 6; i++) {
+      x = cx + s * Math.cos(a + i * Math.PI / 3);
+      y = cy + s * Math.sin(a + i * Math.PI / 3);
+      if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+    }
+    ctx.closePath();
+    ctx.stroke();
+  }
+  function frame() {
+    var w = canvas.width, h = canvas.height, i, j, d, e, dx, dy, dist;
+    ctx.fillStyle = 'rgba(10,14,18,0.22)';
+    ctx.fillRect(0, 0, w, h);
+    ctx.strokeStyle = 'rgba(46,196,182,0.22)';
+    ctx.lineWidth = 1;
+    for (i = 0; i < rings.length; i++) {
+      e = rings[i];
+      e.y += e.v; e.a += 0.004;
+      if (e.y > h + 24) { e.y = -24; e.x = Math.random() * w; }
+      hex(e.x, e.y, e.s, e.a);
+    }
+    for (i = 0; i < nodes.length; i++) {
+      d = nodes[i];
+      d.y += d.v;
+      if (d.y > h + 8) { d.y = -8; d.x = Math.random() * w; }
+      for (j = i + 1; j < nodes.length; j++) {
+        e = nodes[j];
+        dx = d.x - e.x; dy = d.y - e.y;
+        dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 90) {
+          ctx.strokeStyle = 'rgba(46,196,182,' + (0.18 * (1 - dist / 90)) + ')';
+          ctx.beginPath(); ctx.moveTo(d.x, d.y); ctx.lineTo(e.x, e.y); ctx.stroke();
+        }
+      }
+      ctx.fillStyle = d.c;
+      ctx.globalAlpha = 0.7;
+      ctx.beginPath(); ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2); ctx.fill();
+      ctx.globalAlpha = 1;
+    }
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
